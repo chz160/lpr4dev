@@ -2,14 +2,14 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.Server;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Data;
+using Lpr4dev.Server;
+using Lpr4dev.Server.Settings;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
 
-namespace Rnwood.Smtp4dev
+namespace Lpr4dev
 {
     public class UserValidationService : IBasicUserValidationService, IAuthorizationHandler
     {

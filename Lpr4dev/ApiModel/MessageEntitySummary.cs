@@ -6,7 +6,7 @@ using MimeKit;
 using System.Collections;
 using System.Text.Json.Serialization;
 
-namespace Rnwood.Smtp4dev.ApiModel
+namespace Lpr4dev.ApiModel
 {
     public class MessageEntitySummary
     {

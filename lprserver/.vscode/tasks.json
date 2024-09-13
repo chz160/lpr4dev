@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Rnwood.SmtpServer.Tests/Rnwood.SmtpServer.Tests.csproj",
+                "${workspaceFolder}/LprServer.Tests/LprServer.Tests.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -20,7 +20,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/Rnwood.SmtpServer.Tests/Rnwood.SmtpServer.Tests.csproj",
+                "${workspaceFolder}/LprServer.Tests/LprServer.Tests.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -34,7 +34,7 @@
                 "build",
                 "-f",
                 "netcoreapp2.0",
-                "${workspaceFolder}/Rnwood.SmtpServer.Tests/Rnwood.SmtpServer.Tests.csproj",
+                "${workspaceFolder}/LprServer.Tests/LprServer.Tests.csproj",
                  "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
-using Rnwood.Smtp4dev.Migrations;
+using Lpr4dev.Migrations;
 
-namespace Rnwood.Smtp4dev.ApiModel
+namespace Lpr4dev.ApiModel
 {
     public class Message : ICacheByKey
     {

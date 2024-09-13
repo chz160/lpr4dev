@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Options;
-using Rnwood.Smtp4dev.DbModel;
-using Rnwood.Smtp4dev.Hubs;
-using Rnwood.SmtpServer;
+using Lpr4dev.DbModel;
+using Lpr4dev.Hubs;
+using LprServer;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,16 +19,16 @@ using Jint.Native.Json;
 using Jint.Runtime;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.SmtpServer.Extensions.Auth;
+using Lpr4dev.Data;
+using LprServer.Extensions.Auth;
 using Serilog;
-using SmtpResponse = Rnwood.SmtpServer.SmtpResponse;
+using SmtpResponse = LprServer.SmtpResponse;
 using Microsoft.Extensions.Hosting;
 using System.Threading;
 using System.Net;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Server.Settings;
 using DeepEqual.Syntax;
-using MailboxOptions = Rnwood.Smtp4dev.Server.Settings.MailboxOptions;
+using MailboxOptions = Lpr4dev.Server.Settings.MailboxOptions;
 using DotNet.Globbing;
 using System.Text.RegularExpressions;
 using static System.Formats.Asn1.AsnWriter;
@@ -37,7 +37,7 @@ using Org.BouncyCastle.Cms;
 using LinqKit;
 using Org.BouncyCastle.Bcpg.OpenPgp;
 
-namespace Rnwood.Smtp4dev.Server
+namespace Lpr4dev.Server
 {
     internal class Smtp4devServer : ISmtp4devServer, IHostedService
     {
@@ -90,7 +90,7 @@ namespace Rnwood.Smtp4dev.Server
             X509Certificate2 cert = CertificateHelper.GetTlsCertificate(serverOptions.CurrentValue, log);
 
             Settings.ServerOptions serverOptionsValue = serverOptions.CurrentValue;
-            this.smtpServer = new Rnwood.SmtpServer.SmtpServer(new SmtpServer.ServerOptions(serverOptionsValue.AllowRemoteConnections, !serverOptionsValue.DisableIPv6, serverOptionsValue.HostName, serverOptionsValue.Port, serverOptionsValue.AuthenticationRequired,
+            this.smtpServer = new LprServer.SmtpServer(new SmtpServer.ServerOptions(serverOptionsValue.AllowRemoteConnections, !serverOptionsValue.DisableIPv6, serverOptionsValue.HostName, serverOptionsValue.Port, serverOptionsValue.AuthenticationRequired,
                 serverOptionsValue.SmtpEnabledAuthTypesWhenNotSecureConnection.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries), serverOptionsValue.SmtpEnabledAuthTypesWhenSecureConnection.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries),
                 serverOptionsValue.TlsMode == TlsMode.ImplicitTls ? cert : null,
                 serverOptionsValue.TlsMode == TlsMode.StartTls ? cert : null
@@ -546,7 +546,7 @@ namespace Rnwood.Smtp4dev.Server
 
 
         private readonly ITaskQueue taskQueue;
-        private Rnwood.SmtpServer.SmtpServer smtpServer;
+        private LprServer.SmtpServer smtpServer;
         private readonly Func<RelayOptions, SmtpClient> relaySmtpClientFactory;
         private readonly NotificationsHub notificationsHub;
         private readonly IServiceScopeFactory serviceScopeFactory;

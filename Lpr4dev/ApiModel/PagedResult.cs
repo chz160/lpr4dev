@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Rnwood.Smtp4dev.ApiModel
+namespace Lpr4dev.ApiModel
 {
     public abstract class PagedResultBase
     {

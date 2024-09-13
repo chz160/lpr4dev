@@ -1,10 +1,10 @@
-﻿using Rnwood.Smtp4dev.Server.Settings;
+﻿using Lpr4dev.Server.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Rnwood.Smtp4dev.ApiModel
+namespace Lpr4dev.ApiModel
 {
     public class Server
     {

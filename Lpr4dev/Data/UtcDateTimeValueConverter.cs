@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Rnwood.Smtp4dev.Data
+namespace Lpr4dev.Data
 {
     public class UtcDateTimeValueConverter
     {

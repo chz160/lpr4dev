@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Rnwood.Smtp4dev.Migrations
+namespace Lpr4dev.Migrations
 {
     public partial class AddImapState : Migration
     {

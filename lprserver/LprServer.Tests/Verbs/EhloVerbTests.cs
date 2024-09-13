@@ -1,14 +1,14 @@
-﻿// <copyright file="EhloVerbTests.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="EhloVerbTests.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
 using System.Threading.Tasks;
 using Moq;
-using Rnwood.SmtpServer.Extensions;
+using LprServer.Extensions;
 using Xunit;
 
-namespace Rnwood.SmtpServer.Tests.Verbs;
+namespace LprServer.Tests.Verbs;
 
 /// <summary>
 ///     Defines the <see cref="EhloVerbTests" />

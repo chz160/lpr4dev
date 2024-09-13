@@ -1,14 +1,14 @@
 ﻿using MimeKit;
-using Rnwood.Smtp4dev.ApiModel;
+using Lpr4dev.ApiModel;
 using System;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Rnwood.SmtpServer;
+using LprServer;
 
-namespace Rnwood.Smtp4dev.Server
+namespace Lpr4dev.Server
 {
     public class MessageConverter
     {

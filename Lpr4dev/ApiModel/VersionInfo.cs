@@ -1,4 +1,4 @@
-﻿namespace Rnwood.Smtp4dev.ApiModel
+﻿namespace Lpr4dev.ApiModel
 {
     public class VersionInfo
     {

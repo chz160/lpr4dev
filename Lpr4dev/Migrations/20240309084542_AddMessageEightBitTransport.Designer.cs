@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Rnwood.Smtp4dev.Data;
+using Lpr4dev.Data;
 
 #nullable disable
 
-namespace Rnwood.Smtp4dev.Migrations
+namespace Lpr4dev.Migrations
 {
     [DbContext(typeof(Smtp4devDbContext))]
     [Migration("20240309084542_AddMessageEightBitTransport")]
@@ -20,7 +20,7 @@ namespace Rnwood.Smtp4dev.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.2");
 
-            modelBuilder.Entity("Rnwood.Smtp4dev.DbModel.ImapState", b =>
+            modelBuilder.Entity("Lpr4dev.DbModel.ImapState", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,7 +34,7 @@ namespace Rnwood.Smtp4dev.Migrations
                     b.ToTable("ImapState");
                 });
 
-            modelBuilder.Entity("Rnwood.Smtp4dev.DbModel.Message", b =>
+            modelBuilder.Entity("Lpr4dev.DbModel.Message", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -89,7 +89,7 @@ namespace Rnwood.Smtp4dev.Migrations
                     b.ToTable("Messages");
                 });
 
-            modelBuilder.Entity("Rnwood.Smtp4dev.DbModel.MessageRelay", b =>
+            modelBuilder.Entity("Lpr4dev.DbModel.MessageRelay", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -111,7 +111,7 @@ namespace Rnwood.Smtp4dev.Migrations
                     b.ToTable("MessageRelays");
                 });
 
-            modelBuilder.Entity("Rnwood.Smtp4dev.DbModel.Session", b =>
+            modelBuilder.Entity("Lpr4dev.DbModel.Session", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -146,18 +146,18 @@ namespace Rnwood.Smtp4dev.Migrations
                     b.ToTable("Sessions");
                 });
 
-            modelBuilder.Entity("Rnwood.Smtp4dev.DbModel.Message", b =>
+            modelBuilder.Entity("Lpr4dev.DbModel.Message", b =>
                 {
-                    b.HasOne("Rnwood.Smtp4dev.DbModel.Session", "Session")
+                    b.HasOne("Lpr4dev.DbModel.Session", "Session")
                         .WithMany()
                         .HasForeignKey("SessionId");
 
                     b.Navigation("Session");
                 });
 
-            modelBuilder.Entity("Rnwood.Smtp4dev.DbModel.MessageRelay", b =>
+            modelBuilder.Entity("Lpr4dev.DbModel.MessageRelay", b =>
                 {
-                    b.HasOne("Rnwood.Smtp4dev.DbModel.Message", "Message")
+                    b.HasOne("Lpr4dev.DbModel.Message", "Message")
                         .WithMany("Relays")
                         .HasForeignKey("MessageId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -166,7 +166,7 @@ namespace Rnwood.Smtp4dev.Migrations
                     b.Navigation("Message");
                 });
 
-            modelBuilder.Entity("Rnwood.Smtp4dev.DbModel.Message", b =>
+            modelBuilder.Entity("Lpr4dev.DbModel.Message", b =>
                 {
                     b.Navigation("Relays");
                 });

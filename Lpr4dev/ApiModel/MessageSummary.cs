@@ -1,8 +1,8 @@
-﻿using Rnwood.Smtp4dev.Migrations;
+﻿using Lpr4dev.Migrations;
 using System;
 using System.Text.Json.Serialization;
 
-namespace Rnwood.Smtp4dev.ApiModel
+namespace Lpr4dev.ApiModel
 {
     public class MessageSummary : ICacheByKey
     {

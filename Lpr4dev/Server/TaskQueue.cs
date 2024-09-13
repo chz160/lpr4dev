@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 
-namespace Rnwood.Smtp4dev.Server
+namespace Lpr4dev.Server
 {
     public interface ITaskQueue
     {

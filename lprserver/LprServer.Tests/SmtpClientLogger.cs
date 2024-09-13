@@ -1,5 +1,5 @@
-﻿// <copyright file="SmtpClientLogger.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="SmtpClientLogger.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
@@ -9,7 +9,7 @@ using System.Text;
 using MailKit;
 using Xunit.Abstractions;
 
-namespace Rnwood.SmtpServer.Tests;
+namespace LprServer.Tests;
 
 /// <summary>
 ///     Defines the <see cref="ClientTests" />

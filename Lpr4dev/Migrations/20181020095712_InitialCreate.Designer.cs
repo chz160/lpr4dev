@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.DbModel;
+using Lpr4dev.Data;
+using Lpr4dev.DbModel;
 
-namespace Rnwood.Smtp4dev.Migrations
+namespace Lpr4dev.Migrations
 {
     [DbContext(typeof(Smtp4devDbContext))]
     [Migration("20181020095712_InitialCreate")]
@@ -19,7 +19,7 @@ namespace Rnwood.Smtp4dev.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.1.4-rtm-31024");
 
-            modelBuilder.Entity("Rnwood.Smtp4dev.DbModel.Message", b =>
+            modelBuilder.Entity("Lpr4dev.DbModel.Message", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -41,7 +41,7 @@ namespace Rnwood.Smtp4dev.Migrations
                     b.ToTable("Messages");
                 });
 
-            modelBuilder.Entity("Rnwood.Smtp4dev.DbModel.Session", b =>
+            modelBuilder.Entity("Lpr4dev.DbModel.Session", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();

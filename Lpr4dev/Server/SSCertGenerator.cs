@@ -13,8 +13,8 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using Org.BouncyCastle.Crypto.Operators;
 
-[assembly: InternalsVisibleTo("Rnwood.Smtp4dev.Tests")]
-namespace Rnwood.Smtp4dev.Server
+[assembly: InternalsVisibleTo("Lpr4dev.Tests")]
+namespace Lpr4dev.Server
 {
     internal static class SSCertGenerator
     {

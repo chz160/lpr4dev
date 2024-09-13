@@ -1,5 +1,5 @@
-﻿// <copyright file="StartTlsVerb.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="StartTlsVerb.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
@@ -9,9 +9,9 @@ using System.Runtime.Versioning;
 using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
-using Rnwood.SmtpServer.Verbs;
+using LprServer.Verbs;
 
-namespace Rnwood.SmtpServer.Extensions;
+namespace LprServer.Extensions;
 
 /// <summary>
 ///     Defines the <see cref="StartTlsVerb" />.

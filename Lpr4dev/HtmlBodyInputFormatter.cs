@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rnwood.Smtp4dev
+namespace Lpr4dev
 {
     public class HtmlBodyInputFormatter : IInputFormatter
     {

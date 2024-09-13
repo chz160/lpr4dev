@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>Rnwood.SmtpServer is an SMTP server component that can be embedded in application to allow them to receive and process emails using the SMTP protocol. This component powers the popular Smtp4dev application.</Description>
+    <Description>LprServer is an SMTP server component that can be embedded in application to allow them to receive and process emails using the SMTP protocol. This component powers the popular Smtp4dev application.</Description>
     <Copyright>Robert N. Wood</Copyright>
     <VersionPrefix>3.0</VersionPrefix>
     <Authors>Robert N. Wood &lt;rob@rnwood.co.uk&gt;</Authors>
-    <AssemblyName>Rnwood.SmtpServer</AssemblyName>
+    <AssemblyName>LprServer</AssemblyName>
     <OutputType>Library</OutputType>
-    <PackageId>Rnwood.SmtpServer</PackageId>
+    <PackageId>LprServer</PackageId>
     <PackageProjectUrl>http://github.com/rnwood/smtpserver</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/rnwood/smtpserver/blob/master/LICENSE.md</PackageLicenseUrl>
     <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
-    <DocumentationFile>Rnwood.SmtpServer.xml</DocumentationFile>
+    <DocumentationFile>LprServer.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

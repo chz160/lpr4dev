@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using Xunit;
 
-namespace Rnwood.Smtp4dev.Tests.Server.SSCertGenerator
+namespace Lpr4dev.Tests.Server.SSCertGenerator
 {
     public class CertificateTests
     {

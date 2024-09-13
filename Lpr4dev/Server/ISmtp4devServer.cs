@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using MimeKit;
-using Rnwood.Smtp4dev.DbModel;
+using Lpr4dev.DbModel;
 
-namespace Rnwood.Smtp4dev.Server
+namespace Lpr4dev.Server
 {
     public interface ISmtp4devServer
     {

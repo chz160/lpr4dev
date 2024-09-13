@@ -7,12 +7,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Linq;
 using Microsoft.Extensions.DependencyInjection;
-using Rnwood.Smtp4dev.Data;
+using Lpr4dev.Data;
 using Serilog;
-using Rnwood.Smtp4dev.Server.Settings;
-using Rnwood.Smtp4dev.Server.Imap;
+using Lpr4dev.Server.Settings;
+using Lpr4dev.Server.Imap;
 
-namespace Rnwood.Smtp4dev.Server
+namespace Lpr4dev.Server
 {
     public partial class ImapServer
     {

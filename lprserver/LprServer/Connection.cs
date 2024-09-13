@@ -1,5 +1,5 @@
-﻿// <copyright file="Connection.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="Connection.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
@@ -15,10 +15,10 @@ using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Rnwood.SmtpServer.Extensions;
-using Rnwood.SmtpServer.Verbs;
+using LprServer.Extensions;
+using LprServer.Verbs;
 
-namespace Rnwood.SmtpServer;
+namespace LprServer;
 
 /// <summary>
 ///     Represents a single SMTP server from a client to the server.

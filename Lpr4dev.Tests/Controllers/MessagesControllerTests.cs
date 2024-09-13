@@ -1,7 +1,7 @@
 using MimeKit;
-using Rnwood.Smtp4dev.Controllers;
-using Rnwood.Smtp4dev.Server;
-using Rnwood.SmtpServer;
+using Lpr4dev.Controllers;
+using Lpr4dev.Server;
+using LprServer;
 using System;
 using System.IO;
 using System.Linq;
@@ -13,13 +13,13 @@ using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using MimeKit.Encodings;
 using NSubstitute;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.Hubs;
-using Rnwood.Smtp4dev.Tests.DBMigrations.Helpers;
+using Lpr4dev.Data;
+using Lpr4dev.Hubs;
+using Lpr4dev.Tests.DBMigrations.Helpers;
 using Xunit;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Server.Settings;
 
-namespace Rnwood.Smtp4dev.Tests.Controllers
+namespace Lpr4dev.Tests.Controllers
 {
     public class MessagesControllerTests
     {

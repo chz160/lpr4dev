@@ -1,11 +1,11 @@
-﻿// <copyright file="RsetVerb.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="RsetVerb.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
 using System.Threading.Tasks;
 
-namespace Rnwood.SmtpServer.Verbs;
+namespace LprServer.Verbs;
 
 /// <summary>
 ///     Defines the <see cref="RsetVerb" />.

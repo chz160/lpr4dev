@@ -1,5 +1,5 @@
-﻿// <copyright file="ServerTests.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="ServerTests.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
@@ -10,7 +10,7 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Rnwood.SmtpServer.Tests;
+namespace LprServer.Tests;
 
 /// <summary>
 ///     Defines the <see cref="ServerTests" />
@@ -124,11 +124,11 @@ public class ServerTests
         //all the connections.
         Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT);
 
-        using (SmtpServer server1 = new SmtpServer(new Rnwood.SmtpServer.ServerOptions(false, false, "test", (int)StandardSmtpPort.AssignAutomatically, true, [], [], null, null)))
+        using (SmtpServer server1 = new SmtpServer(new LprServer.ServerOptions(false, false, "test", (int)StandardSmtpPort.AssignAutomatically, true, [], [], null, null)))
         {
             server1.Start();
 
-            using (SmtpServer server2 = new SmtpServer(new Rnwood.SmtpServer.ServerOptions(false, false, "test", server1.ListeningEndpoints.First().Port, true, [], [], null, null)))
+            using (SmtpServer server2 = new SmtpServer(new LprServer.ServerOptions(false, false, "test", server1.ListeningEndpoints.First().Port, true, [], [], null, null)))
             {
                 Assert.Throws<SocketException>(() => { server2.Start(); });
             }
@@ -223,7 +223,7 @@ public class ServerTests
     /// <summary>
     /// </summary>
     /// <returns>The <see cref="SmtpServer" /></returns>
-    private SmtpServer NewServer(bool allowRemoteConnections, bool allowIpV6) => new SmtpServer(new Rnwood.SmtpServer.ServerOptions(allowRemoteConnections, allowIpV6, "test", (int)StandardSmtpPort.AssignAutomatically, false, [], [], null, null));
+    private SmtpServer NewServer(bool allowRemoteConnections, bool allowIpV6) => new SmtpServer(new LprServer.ServerOptions(allowRemoteConnections, allowIpV6, "test", (int)StandardSmtpPort.AssignAutomatically, false, [], [], null, null));
 
     /// <summary>
     /// </summary>

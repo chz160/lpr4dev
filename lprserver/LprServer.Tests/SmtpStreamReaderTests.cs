@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Rnwood.SmtpServer.Tests;
+namespace LprServer.Tests;
 
 public class SmtpStreamReaderTests
 {

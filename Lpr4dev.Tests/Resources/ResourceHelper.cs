@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Rnwood.Smtp4dev.Tests.Resources
+namespace Lpr4dev.Tests.Resources
 {
     public static class ResourceHelper
     {

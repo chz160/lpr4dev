@@ -37,14 +37,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rnwood.Smtp4dev\Rnwood.Smtp4dev.csproj" />
+    <ProjectReference Include="..\Lpr4dev\Lpr4dev.csproj" />
   </ItemGroup>
 
 
 
   <Target Name="CopyMainApp" BeforeTargets="BeforeBuild">
-    <Message Importance="high" Text="Publishing Rnwood.Smtp4dev to $(MSBuildProjectDirectory)\$(BaseIntermediateOutputPath)\server" />
-    <MSBuild Projects="../Rnwood.Smtp4dev/Rnwood.Smtp4dev.csproj" Targets="Publish" Properties="Configuration=$(Configuration);Platform=$(Platform);RuntimeIdentifier=$(RuntimeIdentifier);SelfContained=$(SelfContained);PublishDir=$(MSBuildProjectDirectory)\$(BaseIntermediateOutputPath)\server"></MSBuild>
+    <Message Importance="high" Text="Publishing Lpr4dev to $(MSBuildProjectDirectory)\$(BaseIntermediateOutputPath)\server" />
+    <MSBuild Projects="../Lpr4dev/Lpr4dev.csproj" Targets="Publish" Properties="Configuration=$(Configuration);Platform=$(Platform);RuntimeIdentifier=$(RuntimeIdentifier);SelfContained=$(SelfContained);PublishDir=$(MSBuildProjectDirectory)\$(BaseIntermediateOutputPath)\server"></MSBuild>
 
     <ItemGroup>
       <Smtp4DevRuntimeFiles Include="$(MSBuildProjectDirectory)\$(BaseIntermediateOutputPath)\server\wwwroot\**\*" />

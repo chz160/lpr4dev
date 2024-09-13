@@ -5,7 +5,7 @@ using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using Xunit;
 
-namespace Rnwood.Smtp4dev.Tests.CommandLine
+namespace Lpr4dev.Tests.CommandLine
 {
     public class ParseCommandLineTests
     {

@@ -50,18 +50,18 @@ install:
     dotnet restore
 build_script:
  - ps: |
-    dotnet build Rnwood.SmtpServer -c Debug
+    dotnet build LprServer -c Debug
     if ($env:PUBLISH -eq "1") {
-       dotnet pack Rnwood.SmtpServer --include-source -c Release -p:Version=$env:APPVEYOR_BUILD_VERSION -p:"PackageVersion=$env:APPVEYOR_BUILD_VERSION"
+       dotnet pack LprServer --include-source -c Release -p:Version=$env:APPVEYOR_BUILD_VERSION -p:"PackageVersion=$env:APPVEYOR_BUILD_VERSION"
     } else {
       write-host "Skipping publish"
     }
 artifacts:
-- path: Rnwood.SmtpServer\bin\Release\*.nupkg
-- path: Rnwood.SmtpServer\bin\Release\*.snupkg
+- path: LprServer\bin\Release\*.nupkg
+- path: LprServer\bin\Release\*.snupkg
 test_script:
 - ps: |
-    dotnet test -f $env:TESTFRAMEWORK -r Debug Rnwood.SmtpServer.Tests\Rnwood.SmtpServer.Tests.csproj
+    dotnet test -f $env:TESTFRAMEWORK -r Debug LprServer.Tests\LprServer.Tests.csproj
 after_deploy:
  - ps: |
     if ($env:APPVEYOR_REPO_TAG -eq "false") {

@@ -1,12 +1,12 @@
-﻿// <copyright file="StartTlsExtension.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="StartTlsExtension.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
 using System;
 using System.Threading.Tasks;
 
-namespace Rnwood.SmtpServer.Extensions;
+namespace LprServer.Extensions;
 
 /// <summary>
 ///     Defines the <see cref="StartTlsExtension" />.

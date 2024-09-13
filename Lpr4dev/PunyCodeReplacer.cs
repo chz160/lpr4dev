@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace Rnwood.Smtp4dev
+namespace Lpr4dev
 {
     internal class PunyCodeReplacer
     {

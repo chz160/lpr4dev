@@ -3,13 +3,13 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.DbModel;
-using Rnwood.Smtp4dev.Migrations;
-using Rnwood.Smtp4dev.Tests.DBMigrations.Helpers;
+using Lpr4dev.Data;
+using Lpr4dev.DbModel;
+using Lpr4dev.Migrations;
+using Lpr4dev.Tests.DBMigrations.Helpers;
 using Xunit;
 
-namespace Rnwood.Smtp4dev.Tests.DBMigrations
+namespace Lpr4dev.Tests.DBMigrations
 {
     public class TimezoneConvertMigrationTests
     {

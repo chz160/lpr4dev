@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Rnwood.Smtp4dev
+namespace Lpr4dev
 {
     public static class DirectoryHelper
     {

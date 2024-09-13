@@ -2,11 +2,11 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.DbModel;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Data;
+using Lpr4dev.DbModel;
+using Lpr4dev.Server.Settings;
 
-namespace Rnwood.Smtp4dev.Controllers
+namespace Lpr4dev.Controllers
 {
     /// <summary>
     /// Returns information about the version of smtp4dev

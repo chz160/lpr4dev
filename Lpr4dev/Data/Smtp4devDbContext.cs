@@ -2,9 +2,9 @@
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Namotion.Reflection;
-using Rnwood.Smtp4dev.DbModel;
+using Lpr4dev.DbModel;
 
-namespace Rnwood.Smtp4dev.Data
+namespace Lpr4dev.Data
 {
     public class Smtp4devDbContext : DbContext
     {

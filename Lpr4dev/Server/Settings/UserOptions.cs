@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 
-namespace Rnwood.Smtp4dev.Server.Settings
+namespace Lpr4dev.Server.Settings
 {
     [TypeConverter(typeof(UserFromStringConverter))]
     public record UserOptions

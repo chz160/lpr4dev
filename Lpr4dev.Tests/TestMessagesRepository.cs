@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.DbModel;
+using Lpr4dev.Data;
+using Lpr4dev.DbModel;
 
-namespace Rnwood.Smtp4dev.Tests
+namespace Lpr4dev.Tests
 {
     internal class TestMessagesRepository : IMessagesRepository
     {

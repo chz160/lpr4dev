@@ -1,12 +1,12 @@
-﻿// <copyright file="AsyncEventHandler.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="AsyncEventHandler.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
 using System;
 using System.Threading.Tasks;
 
-namespace Rnwood.SmtpServer;
+namespace LprServer;
 
 /// <summary>
 ///     Represents an async event handler which accepts an <see cref="object" /> parameter and a <typeparamref name="T" />

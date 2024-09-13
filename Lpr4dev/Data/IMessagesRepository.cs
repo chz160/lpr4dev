@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Rnwood.Smtp4dev.Data
+namespace Lpr4dev.Data
 {
     public interface IMessagesRepository
     {

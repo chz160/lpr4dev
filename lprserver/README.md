@@ -1,4 +1,4 @@
-# Rnwood.SmtpServer
+# LprServer
 
 A .NET SMTP server component, as used by Smtp4dev.
 

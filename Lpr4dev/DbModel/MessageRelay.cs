@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Rnwood.Smtp4dev.DbModel
+namespace Lpr4dev.DbModel
 {
     public class MessageRelay
     {

@@ -4,9 +4,9 @@ using System.IO;
 using System.Runtime.InteropServices;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Server.Settings;
 
-namespace Rnwood.Smtp4dev.Service
+namespace Lpr4dev.Service
 {
     public interface IHostingEnvironmentHelper
     {

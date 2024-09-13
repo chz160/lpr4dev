@@ -2,11 +2,11 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Rnwood.Smtp4dev.DbModel;
-using Rnwood.Smtp4dev.Hubs;
-using Rnwood.Smtp4dev.Server;
+using Lpr4dev.DbModel;
+using Lpr4dev.Hubs;
+using Lpr4dev.Server;
 
-namespace Rnwood.Smtp4dev.Data
+namespace Lpr4dev.Data
 {
     public class MessagesRepository : IMessagesRepository
     {

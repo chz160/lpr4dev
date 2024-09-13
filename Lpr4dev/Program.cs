@@ -21,14 +21,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Mono.Options;
-using Rnwood.Smtp4dev.Controllers;
-using Rnwood.Smtp4dev.DbModel;
-using Rnwood.Smtp4dev.Server;
-using Rnwood.Smtp4dev.Server.Settings;
-using Rnwood.Smtp4dev.Service;
+using Lpr4dev.Controllers;
+using Lpr4dev.DbModel;
+using Lpr4dev.Server;
+using Lpr4dev.Server.Settings;
+using Lpr4dev.Service;
 using Serilog;
 
-namespace Rnwood.Smtp4dev
+namespace Lpr4dev
 {
     public class Program
     {

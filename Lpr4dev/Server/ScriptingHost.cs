@@ -13,14 +13,14 @@ using Jint.Runtime;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Options;
-using Rnwood.Smtp4dev.DbModel;
-using Rnwood.Smtp4dev.Server.Settings;
-using Rnwood.SmtpServer;
-using Rnwood.SmtpServer.Extensions.Auth;
+using Lpr4dev.DbModel;
+using Lpr4dev.Server.Settings;
+using LprServer;
+using LprServer.Extensions.Auth;
 using Serilog;
 using StreamLib;
 
-namespace Rnwood.Smtp4dev.Server;
+namespace Lpr4dev.Server;
 
 public class ScriptingHost
 {

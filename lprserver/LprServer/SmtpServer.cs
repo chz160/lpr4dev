@@ -1,5 +1,5 @@
-﻿// <copyright file="SmtpServer.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="SmtpServer.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
@@ -12,9 +12,9 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using Rnwood.SmtpServer.Verbs;
+using LprServer.Verbs;
 
-namespace Rnwood.SmtpServer;
+namespace LprServer;
 
 #pragma warning disable CA1724 // Type names should not match namespaces
 /// <summary>

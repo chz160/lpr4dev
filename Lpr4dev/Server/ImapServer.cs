@@ -3,7 +3,7 @@ using LumiSoft.Net.IMAP.Server;
 using LumiSoft.Net.Mime;
 using LumiSoft.Net.MIME;
 using Microsoft.Extensions.Options;
-using Rnwood.Smtp4dev.DbModel;
+using Lpr4dev.DbModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +17,11 @@ using Microsoft.Extensions.Hosting;
 using System.Threading;
 using Microsoft.AspNetCore.Http;
 using Org.BouncyCastle.Utilities.Net;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Server.Settings;
 using DeepEqual.Syntax;
 using MailKit.Net.Imap;
 
-namespace Rnwood.Smtp4dev.Server
+namespace Lpr4dev.Server
 {
     public partial class ImapServer : IHostedService
     {

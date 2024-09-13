@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Rnwood.Smtp4dev
+namespace Lpr4dev
 {
     [Serializable]
     public class CommandLineOptionsException : Exception

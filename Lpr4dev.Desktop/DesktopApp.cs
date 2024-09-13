@@ -1,7 +1,7 @@
 ﻿using H.NotifyIcon.Core;
 using Microsoft.Extensions.Options;
 using PhotinoNET;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Server.Settings;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,7 +15,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace Rnwood.Smtp4dev.Desktop
+namespace Lpr4dev.Desktop
 {
 
 

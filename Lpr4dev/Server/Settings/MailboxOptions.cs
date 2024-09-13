@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Net.Mail;
 
-namespace Rnwood.Smtp4dev.Server.Settings
+namespace Lpr4dev.Server.Settings
 {
     [TypeConverter(typeof(MailboxFromStringConverter))]
     public record MailboxOptions

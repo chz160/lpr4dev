@@ -5,19 +5,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using Microsoft.AspNetCore.Mvc;
-using Rnwood.Smtp4dev.ApiModel;
+using Lpr4dev.ApiModel;
 using System.Linq.Dynamic.Core;
 using Microsoft.EntityFrameworkCore;
-using Message = Rnwood.Smtp4dev.DbModel.Message;
-using Rnwood.Smtp4dev.Server;
+using Message = Lpr4dev.DbModel.Message;
+using Lpr4dev.Server;
 using MimeKit;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.DbModel;
+using Lpr4dev.Data;
+using Lpr4dev.DbModel;
 using NSwag.Annotations;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Server.Settings;
 using Org.BouncyCastle.Cms;
 
-namespace Rnwood.Smtp4dev.Controllers
+namespace Lpr4dev.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

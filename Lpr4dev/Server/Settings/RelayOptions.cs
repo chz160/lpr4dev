@@ -2,7 +2,7 @@
 using MailKit.Security;
 using System.Text.Json.Serialization;
 
-namespace Rnwood.Smtp4dev.Server.Settings
+namespace Lpr4dev.Server.Settings
 {
     public record RelayOptions
     {

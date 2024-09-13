@@ -3,7 +3,7 @@ using System.IO;
 using FluentAssertions;
 using Xunit;
 
-namespace Rnwood.Smtp4dev.Tests
+namespace Lpr4dev.Tests
 {
     public class DirectoryHelperTests
     {

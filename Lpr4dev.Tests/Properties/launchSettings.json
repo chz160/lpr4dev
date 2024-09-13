@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Rnwood.Smtp4dev.Tests": {
+    "Lpr4dev.Tests": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

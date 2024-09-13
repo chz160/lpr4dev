@@ -3,12 +3,12 @@ using LumiSoft.Net.IMAP;
 using LumiSoft.Net.IMAP.Server;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Rnwood.Smtp4dev.DbModel;
+using Lpr4dev.DbModel;
 using System;
 using System.Linq.Expressions;
 using System.Reactive.Subjects;
 
-namespace Rnwood.Smtp4dev.Server.Imap
+namespace Lpr4dev.Server.Imap
 {
     public class ImapSearchTranslator
     {

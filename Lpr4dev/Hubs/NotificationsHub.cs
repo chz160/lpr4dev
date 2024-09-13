@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Connections.Features;
 using Microsoft.AspNetCore.SignalR;
-using Rnwood.Smtp4dev.DbModel;
+using Lpr4dev.DbModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Rnwood.Smtp4dev.Hubs
+namespace Lpr4dev.Hubs
 {
     public class NotificationsHub : Hub
     {

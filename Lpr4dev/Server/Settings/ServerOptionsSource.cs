@@ -2,7 +2,7 @@
 using Ardalis.GuardClauses;
 using Esprima.Ast;
 
-namespace Rnwood.Smtp4dev.Server.Settings
+namespace Lpr4dev.Server.Settings
 {
     public record ServerOptionsSource
     {

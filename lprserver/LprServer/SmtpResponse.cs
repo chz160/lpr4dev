@@ -1,12 +1,12 @@
-﻿// <copyright file="SmtpResponse.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="SmtpResponse.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
 using System;
 using System.Globalization;
 
-namespace Rnwood.SmtpServer;
+namespace LprServer;
 
 /// <summary>
 ///     Represents a SMTP response from server to client which is represented by a numeric code an optional descriptive

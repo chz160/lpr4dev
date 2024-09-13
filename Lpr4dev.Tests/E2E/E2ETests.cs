@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Rnwood.Smtp4dev.Tests.E2E
+namespace Lpr4dev.Tests.E2E
 {
     [Collection("E2E")]
     public class E2ETests
@@ -50,7 +50,7 @@ namespace Rnwood.Smtp4dev.Tests.E2E
 
             if (string.IsNullOrEmpty(workingDir))
             {
-                workingDir = Path.GetFullPath("../../../../Rnwood.Smtp4dev");
+                workingDir = Path.GetFullPath("../../../../Lpr4dev");
             }
             else
             {
@@ -70,7 +70,7 @@ namespace Rnwood.Smtp4dev.Tests.E2E
                 //netcoreapp3.1
                 string folder = framework.TrimStart('.').Replace("CoreApp,Version=v", "").ToLower();
 
-                string mainModule = Path.GetFullPath($"../../../../Rnwood.Smtp4dev/bin/Debug/{folder}/Rnwood.Smtp4dev.dll");
+                string mainModule = Path.GetFullPath($"../../../../Lpr4dev/bin/Debug/{folder}/Lpr4dev.dll");
                 args.Insert(0, mainModule);
 
             }

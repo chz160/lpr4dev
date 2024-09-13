@@ -1,17 +1,17 @@
 ﻿using MimeKit;
 using NSubstitute;
-using Rnwood.Smtp4dev.Controllers;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.Hubs;
-using Rnwood.Smtp4dev.Server;
-using Rnwood.Smtp4dev.Server.Settings;
-using Rnwood.Smtp4dev.Tests.DBMigrations.Helpers;
-using Rnwood.SmtpServer;
+using Lpr4dev.Controllers;
+using Lpr4dev.Data;
+using Lpr4dev.Hubs;
+using Lpr4dev.Server;
+using Lpr4dev.Server.Settings;
+using Lpr4dev.Tests.DBMigrations.Helpers;
+using LprServer;
 using System;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Rnwood.Smtp4dev.Tests.Data
+namespace Lpr4dev.Tests.Data
 {
     public class DataModelTests
     {

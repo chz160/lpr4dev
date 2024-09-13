@@ -7,15 +7,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MimeKit;
 using NSubstitute;
-using Rnwood.Smtp4dev.ApiModel;
-using Rnwood.Smtp4dev.Controllers;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.Server;
-using Rnwood.Smtp4dev.Tests.DBMigrations.Helpers;
+using Lpr4dev.ApiModel;
+using Lpr4dev.Controllers;
+using Lpr4dev.Data;
+using Lpr4dev.Server;
+using Lpr4dev.Tests.DBMigrations.Helpers;
 using Xunit;
-using Message = Rnwood.Smtp4dev.DbModel.Message;
+using Message = Lpr4dev.DbModel.Message;
 
-namespace Rnwood.Smtp4dev.Tests.Controllers
+namespace Lpr4dev.Tests.Controllers
 {
     public class RelayMessagesTests : IDisposable
     {

@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NSwag.Annotations;
-using Rnwood.Smtp4dev.ApiModel;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.Server;
-using Session = Rnwood.Smtp4dev.DbModel.Session;
+using Lpr4dev.ApiModel;
+using Lpr4dev.Data;
+using Lpr4dev.Server;
+using Session = Lpr4dev.DbModel.Session;
 
-namespace Rnwood.Smtp4dev.Controllers
+namespace Lpr4dev.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

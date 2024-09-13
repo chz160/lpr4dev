@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Rnwood.Smtp4dev.Tests.E2E.PageModel
+namespace Lpr4dev.Tests.E2E.PageModel
 {
 	public class HomePage
 	{

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using Rnwood.SmtpServer;
+using LprServer;
 
-namespace Rnwood.Smtp4dev.DbModel
+namespace Lpr4dev.DbModel
 {
     public class Session
     {

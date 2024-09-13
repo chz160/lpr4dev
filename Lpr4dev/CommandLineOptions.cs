@@ -1,6 +1,6 @@
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Server.Settings;
 
-namespace Rnwood.Smtp4dev
+namespace Lpr4dev
 {
     public class CommandLineOptions
     {

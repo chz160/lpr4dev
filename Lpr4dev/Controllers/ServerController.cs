@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using Rnwood.Smtp4dev.Server;
+using Lpr4dev.Server;
 using Microsoft.Extensions.Options;
 using System.Text.Json;
 using MailKit.Security;
 using Microsoft.Extensions.Hosting;
-using Rnwood.Smtp4dev.Service;
+using Lpr4dev.Service;
 using System.Text.Json.Serialization;
 using NSwag.Annotations;
 using System.ComponentModel;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Server.Settings;
 using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
 using Namotion.Reflection;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using DeepEqual.Syntax;
 
-namespace Rnwood.Smtp4dev.Controllers
+namespace Lpr4dev.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

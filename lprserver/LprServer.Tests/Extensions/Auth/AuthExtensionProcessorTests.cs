@@ -2,10 +2,10 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Moq;
-using Rnwood.SmtpServer.Extensions.Auth;
+using LprServer.Extensions.Auth;
 using Xunit;
 
-namespace Rnwood.SmtpServer.Tests.Extensions.Auth;
+namespace LprServer.Tests.Extensions.Auth;
 
 public class AuthExtensionProcessorTests
 {

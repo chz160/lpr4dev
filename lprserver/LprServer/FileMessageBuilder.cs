@@ -1,5 +1,5 @@
-﻿// <copyright file="FileMessageBuilder.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="FileMessageBuilder.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
@@ -8,12 +8,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Rnwood.SmtpServer;
+namespace LprServer;
 
 /// <summary>
 ///     Implements a message builder which will build a <see cref="FileMessage" />.
 /// </summary>
-/// <seealso cref="Rnwood.SmtpServer.IMessageBuilder" />
+/// <seealso cref="LprServer.IMessageBuilder" />
 public class FileMessageBuilder : IMessageBuilder
 {
 #pragma warning disable CA2213 // Disposable fields should be disposed

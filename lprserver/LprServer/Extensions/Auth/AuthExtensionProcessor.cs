@@ -1,5 +1,5 @@
-﻿// <copyright file="AuthExtensionProcessor.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="AuthExtensionProcessor.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
@@ -8,12 +8,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Rnwood.SmtpServer.Extensions.Auth;
+namespace LprServer.Extensions.Auth;
 
 /// <summary>
 ///     Implements the AUTH extension for a connection.
 /// </summary>
-/// <seealso cref="Rnwood.SmtpServer.Extensions.IExtensionProcessor" />
+/// <seealso cref="LprServer.Extensions.IExtensionProcessor" />
 public class AuthExtensionProcessor : IExtensionProcessor
 {
     /// <summary>

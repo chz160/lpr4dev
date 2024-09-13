@@ -1,4 +1,4 @@
-﻿namespace Rnwood.Smtp4dev.Tests.DBMigrations.Helpers
+﻿namespace Lpr4dev.Tests.DBMigrations.Helpers
 {
     public class TimeZoneOffset
     {

@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rnwood.Smtp4dev\Rnwood.Smtp4dev.csproj" />
+    <ProjectReference Include="..\Lpr4dev\Lpr4dev.csproj" />
   </ItemGroup>
 
   <ItemGroup>

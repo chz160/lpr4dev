@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Rnwood.Smtp4dev.ApiModel;
+using Lpr4dev.ApiModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rnwood.Smtp4dev.Controllers
+namespace Lpr4dev.Controllers
 {
     public class UseEtagFilterAttribute : Attribute, IActionFilter
     {

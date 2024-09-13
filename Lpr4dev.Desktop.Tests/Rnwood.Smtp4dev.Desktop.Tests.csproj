@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rnwood.Smtp4dev.Desktop\Rnwood.Smtp4dev.Desktop.csproj" />
+    <ProjectReference Include="..\Lpr4dev.Desktop\Lpr4dev.Desktop.csproj" />
   </ItemGroup>
 
 </Project>

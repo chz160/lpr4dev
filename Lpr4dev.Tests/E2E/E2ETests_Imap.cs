@@ -14,7 +14,7 @@ using Xunit;
 using Xunit.Abstractions;
 using MailboxAddress = MimeKit.MailboxAddress;
 
-namespace Rnwood.Smtp4dev.Tests.E2E
+namespace Lpr4dev.Tests.E2E
 {
     public class E2ETests_Imap : E2ETests
     {

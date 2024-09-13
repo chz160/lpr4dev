@@ -1,5 +1,5 @@
-﻿// <copyright file="ClientTests.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="ClientTests.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
@@ -29,7 +29,7 @@ using Xunit;
 using Xunit.Abstractions;
 using X509Certificate = Org.BouncyCastle.X509.X509Certificate;
 
-namespace Rnwood.SmtpServer.Tests;
+namespace LprServer.Tests;
 
 /// <summary>
 ///     Defines the <see cref="ClientTests" />
@@ -54,7 +54,7 @@ public partial class ClientTests
     [Fact]
     public async Task MailKit_SmtpUtf8()
     {
-        using (SmtpServer server = new SmtpServer(new Rnwood.SmtpServer.ServerOptions(false, false, "test", (int)StandardSmtpPort.AssignAutomatically, false, [], [], null, null)))
+        using (SmtpServer server = new SmtpServer(new LprServer.ServerOptions(false, false, "test", (int)StandardSmtpPort.AssignAutomatically, false, [], [], null, null)))
         {
             ConcurrentBag<IMessage> messages = new ConcurrentBag<IMessage>();
 
@@ -82,7 +82,7 @@ public partial class ClientTests
     [Fact]
     public async Task MailKit_NonSSL()
     {
-        using (SmtpServer server = new SmtpServer(new Rnwood.SmtpServer.ServerOptions(false, false, "test",(int)StandardSmtpPort.AssignAutomatically, false, [], [], null, null)))
+        using (SmtpServer server = new SmtpServer(new LprServer.ServerOptions(false, false, "test",(int)StandardSmtpPort.AssignAutomatically, false, [], [], null, null)))
         {
             ConcurrentBag<IMessage> messages = new ConcurrentBag<IMessage>();
 
@@ -108,7 +108,7 @@ public partial class ClientTests
     [Fact]
     public async Task MailKit_StartTLS()
     {
-        using (SmtpServer server = new SmtpServer(new Rnwood.SmtpServer.ServerOptions( false,false, Dns.GetHostName(),
+        using (SmtpServer server = new SmtpServer(new LprServer.ServerOptions( false,false, Dns.GetHostName(),
                    (int)StandardSmtpPort.AssignAutomatically, false, [], [],
                    null, CreateSelfSignedCertificate())))
         {
@@ -136,7 +136,7 @@ public partial class ClientTests
     [Fact]
     public async Task MailKit_ImplicitTLS()
     {
-        using (SmtpServer server = new SmtpServer(new Rnwood.SmtpServer.ServerOptions( false,false, Dns.GetHostName(),
+        using (SmtpServer server = new SmtpServer(new LprServer.ServerOptions( false,false, Dns.GetHostName(),
                    (int)StandardSmtpPort.AssignAutomatically, false, [], [],
                    CreateSelfSignedCertificate(), null)))
         {
@@ -165,7 +165,7 @@ public partial class ClientTests
     [Fact]
     public async Task MailKit_NonSSL_StressTest()
     {
-        using (SmtpServer server = new SmtpServer(new Rnwood.SmtpServer.ServerOptions( false, false, "test", (int) StandardSmtpPort.AssignAutomatically, false, [], [], null, null)))
+        using (SmtpServer server = new SmtpServer(new LprServer.ServerOptions( false, false, "test", (int) StandardSmtpPort.AssignAutomatically, false, [], [], null, null)))
         {
             ConcurrentBag<IMessage> messages = new ConcurrentBag<IMessage>();
 

@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
-using Rnwood.Smtp4dev.ApiModel;
+using Lpr4dev.ApiModel;
 
-namespace Rnwood.Smtp4dev.Controllers
+namespace Lpr4dev.Controllers
 {
     /// <summary>
     /// Returns information about the version of smtp4dev

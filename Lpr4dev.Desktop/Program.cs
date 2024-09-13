@@ -19,9 +19,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting.Server;
 using System.Reactive;
 using Microsoft.Extensions.Options;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Server.Settings;
 
-namespace Rnwood.Smtp4dev.Desktop
+namespace Lpr4dev.Desktop
 {
     public class Program
     {
@@ -45,7 +45,7 @@ namespace Rnwood.Smtp4dev.Desktop
 
         private static async Task RunAsync(string[] args)
         {
-            Rnwood.Smtp4dev.Program.SetupStaticLogger(args);
+            Lpr4dev.Program.SetupStaticLogger(args);
             string origWorkingDir = AppContext.BaseDirectory;
             DesktopApp app = null;
 
@@ -54,7 +54,7 @@ namespace Rnwood.Smtp4dev.Desktop
                 app = new DesktopApp();
 
                 var host =
-                       await Rnwood.Smtp4dev.Program.StartApp(args, true, o =>
+                       await Lpr4dev.Program.StartApp(args, true, o =>
                        {
                            o.Urls = "http://127.0.0.1:0";
                            o.IsDesktopApp = true;

@@ -1,5 +1,5 @@
-// <copyright file="FileSession.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+// <copyright file="FileSession.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
@@ -8,12 +8,12 @@ using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace Rnwood.SmtpServer;
+namespace LprServer;
 
 /// <summary>
 ///     Implements an <see cref="ISession" /> where the session log is saved to a file.
 /// </summary>
-/// <seealso cref="Rnwood.SmtpServer.AbstractSession" />
+/// <seealso cref="LprServer.AbstractSession" />
 public class FileSession : AbstractSession
 {
     private readonly FileInfo file;

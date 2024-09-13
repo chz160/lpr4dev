@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Rnwood.Smtp4dev.Migrations
+namespace Lpr4dev.Migrations
 {
     /// <inheritdoc />
     public partial class AddMailboxes : Migration

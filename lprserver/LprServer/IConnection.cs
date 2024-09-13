@@ -1,5 +1,5 @@
-// <copyright file="IConnection.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+// <copyright file="IConnection.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
@@ -7,10 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using Rnwood.SmtpServer.Extensions;
-using Rnwood.SmtpServer.Verbs;
+using LprServer.Extensions;
+using LprServer.Verbs;
 
-namespace Rnwood.SmtpServer;
+namespace LprServer;
 
 /// <summary>
 ///     Defines the <see cref="IConnection" />.

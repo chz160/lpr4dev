@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Rnwood.SmtpServer.Tests/bin/Debug/netcoreapp2.0/Rnwood.SmtpServer.Tests.dll",
+            "program": "${workspaceFolder}/LprServer.Tests/bin/Debug/netcoreapp2.0/LprServer.Tests.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Rnwood.SmtpServer.Tests",
+            "cwd": "${workspaceFolder}/LprServer.Tests",
             "console": "internalConsole",
             "stopAtEntry": false
         },

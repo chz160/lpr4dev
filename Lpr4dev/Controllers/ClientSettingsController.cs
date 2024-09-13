@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using NSwag.Annotations;
-using Rnwood.Smtp4dev.ApiModel;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.ApiModel;
+using Lpr4dev.Server.Settings;
 
-namespace Rnwood.Smtp4dev.Controllers
+namespace Lpr4dev.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

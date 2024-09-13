@@ -3,9 +3,9 @@ using System.Data.Common;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Rnwood.Smtp4dev.Data;
+using Lpr4dev.Data;
 
-namespace Rnwood.Smtp4dev.Tests.DBMigrations.Helpers
+namespace Lpr4dev.Tests.DBMigrations.Helpers
 {
     public class SqliteInMemory : IDisposable
     {

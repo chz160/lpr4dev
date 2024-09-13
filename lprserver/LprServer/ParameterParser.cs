@@ -1,12 +1,12 @@
-﻿// <copyright file="ParameterParser.cs" company="Rnwood.SmtpServer project contributors">
-// Copyright (c) Rnwood.SmtpServer project contributors. All rights reserved.
+﻿// <copyright file="ParameterParser.cs" company="LprServer project contributors">
+// Copyright (c) LprServer project contributors. All rights reserved.
 // Licensed under the BSD license. See LICENSE.md file in the project root for full license information.
 // </copyright>
 
 using System;
 using System.Collections.Generic;
 
-namespace Rnwood.SmtpServer;
+namespace LprServer;
 
 /// <summary>
 ///     Defines the <see cref="ParameterParser" /> which implements parsing of A=1 B=2 type string for command parameters.

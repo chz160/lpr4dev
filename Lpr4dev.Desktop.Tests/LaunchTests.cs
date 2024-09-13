@@ -7,7 +7,7 @@ using System.Runtime.Versioning;
 using System.Text.RegularExpressions;
 using Xunit;
 using Xunit.Abstractions;
-namespace Rnwood.Smtp4dev.Desktop.Tests
+namespace Lpr4dev.Desktop.Tests
 {
     public class LaunchTests
     {
@@ -36,7 +36,7 @@ namespace Rnwood.Smtp4dev.Desktop.Tests
 
             if (string.IsNullOrEmpty(workingDir))
             {
-                workingDir = Path.GetFullPath("../../../../Rnwood.Smtp4dev.Desktop");
+                workingDir = Path.GetFullPath("../../../../Lpr4dev.Desktop");
             }
             else
             {
@@ -48,7 +48,7 @@ namespace Rnwood.Smtp4dev.Desktop.Tests
                 binary = "dotnet";
 
                 //.NETCoreapp,Version=v3.1
-                string framework = typeof(Rnwood.Smtp4dev.Desktop.Program)
+                string framework = typeof(Lpr4dev.Desktop.Program)
                     .Assembly
                     .GetCustomAttribute<TargetFrameworkAttribute>()?
                     .FrameworkName;
@@ -56,7 +56,7 @@ namespace Rnwood.Smtp4dev.Desktop.Tests
                 //netcoreapp3.1
                 string folder = framework.TrimStart('.').Replace("CoreApp,Version=v", "").ToLower();
 
-                string mainModule = Path.GetFullPath($"../../../../Rnwood.Smtp4dev.Desktop/bin/Debug/{folder}/Rnwood.Smtp4dev.Desktop.dll");
+                string mainModule = Path.GetFullPath($"../../../../Lpr4dev.Desktop/bin/Debug/{folder}/Lpr4dev.Desktop.dll");
                 args.Insert(0, mainModule);
 
             }

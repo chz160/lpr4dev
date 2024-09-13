@@ -8,27 +8,27 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Rnwood.Smtp4dev.DbModel;
-using Rnwood.Smtp4dev.Hubs;
-using Rnwood.Smtp4dev.Server;
+using Lpr4dev.DbModel;
+using Lpr4dev.Hubs;
+using Lpr4dev.Server;
 using VueCliMiddleware;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.SpaServices;
 using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Rewrite;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.Service;
+using Lpr4dev.Data;
+using Lpr4dev.Service;
 using Serilog;
 using System.Linq;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.ResponseCompression;
-using Rnwood.Smtp4dev.Server.Settings;
+using Lpr4dev.Server.Settings;
 using Microsoft.AspNetCore.Authorization;
 using AspNetCore.Authentication.Basic;
 
-namespace Rnwood.Smtp4dev
+namespace Lpr4dev
 {
     public class Startup
     {

@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Rnwood.Smtp4dev": {
+    "Lpr4dev": {
       "commandName": "Project",
       "commandLineArgs": "--db=database2.db",
       "launchBrowser": true,

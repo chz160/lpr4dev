@@ -1,4 +1,4 @@
-﻿namespace Rnwood.Smtp4dev.Server.Settings
+﻿namespace Lpr4dev.Server.Settings
 {
     public record DesktopOptionsSource
     {

@@ -1,20 +1,20 @@
 ﻿using MimeKit;
-using Rnwood.Smtp4dev.Data;
-using Rnwood.Smtp4dev.Server.Settings;
-using Rnwood.Smtp4dev.Server;
-using Rnwood.Smtp4dev.Tests.DBMigrations.Helpers;
-using Rnwood.SmtpServer;
+using Lpr4dev.Data;
+using Lpr4dev.Server.Settings;
+using Lpr4dev.Server;
+using Lpr4dev.Tests.DBMigrations.Helpers;
+using LprServer;
 using System.Threading.Tasks;
 using System;
 using Xunit;
-using Rnwood.Smtp4dev.Server.Imap;
+using Lpr4dev.Server.Imap;
 using LumiSoft.Net.IMAP;
 using System.Linq.Dynamic.Core;
 using FluentAssertions;
-using Rnwood.Smtp4dev.Migrations;
+using Lpr4dev.Migrations;
 using Org.BouncyCastle.Bcpg;
 
-namespace Rnwood.Smtp4dev.Tests
+namespace Lpr4dev.Tests
 {
 
     public class ImapSearchTranslatorTests

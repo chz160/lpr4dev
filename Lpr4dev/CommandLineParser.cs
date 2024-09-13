@@ -5,7 +5,7 @@ using System.Linq;
 using CommandLiners;
 using Mono.Options;
 
-namespace Rnwood.Smtp4dev
+namespace Lpr4dev
 {
     public static class CommandLineParser
     {

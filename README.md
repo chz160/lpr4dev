@@ -1,4 +1,4 @@
-# <img src='Rnwood.Smtp4dev/ClientApp/public/logo.png' alt='logo'/>
+# <img src='Lpr4dev/ClientApp/public/logo.png' alt='logo'/>
 **smtp4dev - the fake SMTP email server for development and testing.**
 
 A dummy SMTP server for Windows, Linux, Mac OS-X (and maybe elsewhere where .NET Core is available). Lets you test your application without spamming your real customers.

@@ -5,7 +5,7 @@ using MimeKit;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.Extensions;
-using Rnwood.Smtp4dev.Tests.E2E.PageModel;
+using Lpr4dev.Tests.E2E.PageModel;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -17,7 +17,7 @@ using WebDriverManager.Helpers;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Rnwood.Smtp4dev.Tests.E2E
+namespace Lpr4dev.Tests.E2E
 {
     public class E2ETests_WebUI : E2ETests
     {
