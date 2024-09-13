@@ -29,7 +29,7 @@ Obj/
 
 # Visual Studio 2015 cache/options directory
 .vs/
-Rnwood.Smtp4dev/wwwroot/*
+Lpr4dev/wwwroot/*
 
 /yarn.lock
 
@@ -239,10 +239,10 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 node_modules
-/Rnwood.Smtp4dev/wwwroot/*
-/Rnwood.Smtp4dev/database.db
-/Rnwood.Smtp4dev/out
-/Rnwood.Smtp4dev/selfsigned-certificate.cer
-/Rnwood.Smtp4dev/ClientApp/.idea/*
-/Rnwood.Smtp4dev.Desktop/server
-/Rnwood.Smtp4dev.Desktop/wwwroot/*
+/Lpr4dev/wwwroot/*
+/Lpr4dev/database.db
+/Lpr4dev/out
+/Lpr4dev/selfsigned-certificate.cer
+/Lpr4dev/ClientApp/.idea/*
+/Lpr4dev.Desktop/server
+/Lpr4dev.Desktop/wwwroot/*

@@ -1,0 +1,9 @@
+.vs
+obj
+bin
+*.ncrunch*
+packages
+_ncrunch_*
+*.user
+/Lpr4dev/node_modules
+.idea

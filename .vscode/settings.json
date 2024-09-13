@@ -5,9 +5,9 @@
     "vue"
   ],
   "eslint.workingDirectories": [
-    "Rnwood.Smtp4dev/ClientApp"
+    "Lpr4dev/ClientApp"
   ],
   "npm.includeDirectories": [
-    "Rnwood.Smtp4dev/ClientApp"
+    "Lpr4dev/ClientApp"
   ]
 }

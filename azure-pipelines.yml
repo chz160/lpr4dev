@@ -23,8 +23,8 @@ variables:
   ${{ if not(startsWith(variables['Build.SourceBranch'], 'refs/tags/')) }}:
     tag: $[ format('{0}{1:yyyyMMdd}{2}', variables['CIBUILDVERSIONPREFIX'], pipeline.startTime, counter(format('{0:yyyyMMdd}', pipeline.startTime), 100)) ]
 
-  docker_repo: "rnwood/smtp4dev"
-  docker_registry: "dockerhub-rnwood"
+  docker_repo: "chz160/lpr4dev"
+  docker_registry: "dockerhub-chz160"
   netcoresdk_version: "8.0.201"
 
 stages:
@@ -95,40 +95,40 @@ stages:
             displayName: Build $(platformName)
             inputs:
               command: build
-              projects: Rnwood.Smtp4dev/Rnwood.Smtp4dev.csproj
+              projects: Lpr4dev/Lpr4dev.csproj
               publishWebProjects: false
               arguments: '-c Release $(buildArgs) -p:version=$(tag)'
           - task: DotNetCoreCLI@2
             displayName: Publish $(platformName)
             inputs:
               command: publish
-              projects: Rnwood.Smtp4dev/Rnwood.Smtp4dev.csproj
+              projects: Lpr4dev/Lpr4dev.csproj
               publishWebProjects: false
               arguments: '-c Release $(buildArgs) -p:version=$(tag) -o "$(Build.ArtifactStagingDirectory)/$(platformName)"'
           - task: ExtractFiles@1
             displayName: Extract files for E2E tests
             condition: eq(variables['runTests'], true)
             inputs:
-              archiveFilePatterns: '$(Build.ArtifactStagingDirectory)/$(platformName)/Rnwood.Smtp4dev.zip'
+              archiveFilePatterns: '$(Build.ArtifactStagingDirectory)/$(platformName)/Lpr4dev.zip'
               destinationFolder: $(Agent.TempDirectory)/e2e
           - task: DotNetCoreCLI@2
             condition: eq(variables['runTests'], true)
-            displayName: Run SmtpServer Tests
+            displayName: Run LprServer Tests
             inputs:
               command: test
-              projects: Rnwood.SmtpServer.Tests
+              projects: LprServer.Tests
               configuration: release
           - task: DotNetCoreCLI@2
             condition: eq(variables['runTests'], true)
             displayName: Run Tests
             env:
-              SMTP4DEV_E2E_WORKINGDIR: $(Agent.TempDirectory)/e2e
-              SMTP4DEV_E2E_BINARY: $(Agent.TempDirectory)/e2e/Rnwood.Smtp4dev
+              LPR4DEV_E2E_WORKINGDIR: $(Agent.TempDirectory)/e2e
+              LPR4DEV_E2E_BINARY: $(Agent.TempDirectory)/e2e/Lpr4dev
             inputs:
               command: test
-              projects: Rnwood.Smtp4dev.Tests
+              projects: Lpr4dev.Tests
               configuration: release
-          - powershell: move-item $(Build.ArtifactStagingDirectory)/$(platformName)/Rnwood.Smtp4dev.zip $(Build.ArtifactStagingDirectory)/$(platformName)/Rnwood.Smtp4dev-$(platformName)-$(tag).zip
+          - powershell: move-item $(Build.ArtifactStagingDirectory)/$(platformName)/Lpr4dev.zip $(Build.ArtifactStagingDirectory)/$(platformName)/Lpr4dev-$(platformName)-$(tag).zip
             displayName: Rename artifact
           - publish: $(Build.ArtifactStagingDirectory)/$(platformName)
             artifact: $(platformName)
@@ -149,7 +149,7 @@ stages:
             inputs:
               command: custom
               custom: pack
-              arguments: '-c Release -p:PackAsTool=true -p:version=$(tag) -o "$(Build.ArtifactStagingDirectory)/dotnetglobaltool" Rnwood.Smtp4dev/Rnwood.Smtp4dev.csproj'
+              arguments: '-c Release -p:PackAsTool=true -p:version=$(tag) -o "$(Build.ArtifactStagingDirectory)/dotnetglobaltool" Lpr4dev/Lpr4dev.csproj'
           - publish: $(Build.ArtifactStagingDirectory)/dotnetglobaltool
             artifact: dotnetglobaltool
 
@@ -167,24 +167,24 @@ stages:
             displayName: Build .NET Core - win-x64-desktop
             inputs:
               command: publish
-              projects: "Rnwood.Smtp4dev.Desktop/Rnwood.Smtp4dev.Desktop.csproj"
+              projects: "Lpr4dev.Desktop/Lpr4dev.Desktop.csproj"
               publishWebProjects: false
               arguments: '-c Release -r win-x64 -p:version=$(tag) --self-contained -p:PublishSingleFile=true -o "$(Build.ArtifactStagingDirectory)/win-x64-desktop"'
           - task: ExtractFiles@1
             displayName: Extract files for E2E tests
             inputs:
-              archiveFilePatterns: '$(Build.ArtifactStagingDirectory)/win-x64-desktop/Rnwood.Smtp4dev.Desktop.zip'
+              archiveFilePatterns: '$(Build.ArtifactStagingDirectory)/win-x64-desktop/Lpr4dev.Desktop.zip'
               destinationFolder: $(Agent.TempDirectory)/e2e
           - task: DotNetCoreCLI@2
             displayName: Run Tests
             env:
-              SMTP4DEV_E2E_WORKINGDIR: $(Agent.TempDirectory)/e2e
-              SMTP4DEV_E2E_BINARY: $(Agent.TempDirectory)/e2e/Rnwood.Smtp4dev.Desktop
+              LPR4DEV_E2E_WORKINGDIR: $(Agent.TempDirectory)/e2e
+              LPR4DEV_E2E_BINARY: $(Agent.TempDirectory)/e2e/Lpr4dev.Desktop
             inputs:
               command: test
-              projects: Rnwood.Smtp4dev.Desktop.Tests
+              projects: Lpr4dev.Desktop.Tests
               configuration: release
-          - powershell: move-item $(Build.ArtifactStagingDirectory)/win-x64-desktop/Rnwood.Smtp4dev.Desktop.zip $(Build.ArtifactStagingDirectory)/win-x64-desktop/Rnwood.Smtp4dev.Desktop-win-x64-$(tag).zip
+          - powershell: move-item $(Build.ArtifactStagingDirectory)/win-x64-desktop/Lpr4dev.Desktop.zip $(Build.ArtifactStagingDirectory)/win-x64-desktop/Lpr4dev.Desktop-win-x64-$(tag).zip
             displayName: Rename artifact
           - publish: $(Build.ArtifactStagingDirectory)/win-x64-desktop
             artifact: win-x64-desktop
@@ -193,10 +193,10 @@ stages:
           #   displayName: Build .NET Core - linux-x64-desktop
           #   inputs:
           #     command: publish
-          #     projects: 'Rnwood.Smtp4dev.Desktop/Rnwood.Smtp4dev.Desktop.csproj'
+          #     projects: 'Lpr4dev.Desktop/Lpr4dev.Desktop.csproj'
           #     publishWebProjects: false
           #     arguments: '-c Release -r linux-x64 -p:version=$(tag) --self-contained -p:PublishSingleFile=true -o "$(Build.ArtifactStagingDirectory)/linux-x64-desktop"'
-          # - powershell: move-item $(Build.ArtifactStagingDirectory)/linux-x64-desktop/Rnwood.Smtp4dev.Desktop.zip $(Build.ArtifactStagingDirectory)/linux-x64-desktop/Rnwood.Smtp4dev.Desktop-linux-x64-$(tag).zip
+          # - powershell: move-item $(Build.ArtifactStagingDirectory)/linux-x64-desktop/Lpr4dev.Desktop.zip $(Build.ArtifactStagingDirectory)/linux-x64-desktop/Lpr4dev.Desktop-linux-x64-$(tag).zip
           #   displayName: Rename artifact
           # - publish: $(Build.ArtifactStagingDirectory)/linux-x64-desktop
           #   artifact: linux-x64-desktop
@@ -214,7 +214,7 @@ stages:
             displayName: Publish
             inputs:
               command: publish
-              projects: Rnwood.Smtp4dev/Rnwood.Smtp4dev.csproj
+              projects: Lpr4dev/Lpr4dev.csproj
               publishWebProjects: false
               zipAfterPublish: false
               modifyOutputPath: false
@@ -228,10 +228,10 @@ stages:
           # - task: DotNetCoreCLI@2
           #   displayName: Run Tests
           #   env:
-          #     SMTP4DEV_E2E_WORKINGDIR: $(Agent.TempDirectory)
-          #     SMTP4DEV_E2E_USEDEFAULTDBPATH: 1
-          #     SMTP4DEV_E2E_BINARY: docker
-          #     SMTP4DEV_E2E_ARGS: |
+          #     LPR4DEV_E2E_WORKINGDIR: $(Agent.TempDirectory)
+          #     LPR4DEV_E2E_USEDEFAULTDBPATH: 1
+          #     LPR4DEV_E2E_BINARY: docker
+          #     LPR4DEV_E2E_ARGS: |
           #       run
           #       -i
           #       -p
@@ -267,7 +267,7 @@ stages:
             displayName: Publish
             inputs:
               command: publish
-              projects: Rnwood.Smtp4dev/Rnwood.Smtp4dev.csproj
+              projects: Lpr4dev/Lpr4dev.csproj
               publishWebProjects: false
               zipAfterPublish: false
               modifyOutputPath: false
@@ -301,7 +301,7 @@ stages:
             displayName: Publish
             inputs:
               command: publish
-              projects: Rnwood.Smtp4dev/Rnwood.Smtp4dev.csproj
+              projects: Lpr4dev/Lpr4dev.csproj
               publishWebProjects: false
               zipAfterPublish: false
               modifyOutputPath: false
@@ -364,12 +364,12 @@ stages:
               command: "push"
               packagesToPush: "$(Build.ArtifactStagingDirectory)/dotnetglobaltool/*.nupkg"
               nuGetFeedType: "external"
-              publishFeedCredentials: "nuget_rnwood"
+              publishFeedCredentials: "nuget_chz160"
 
           - task: GitHubRelease@1
             inputs:
-              gitHubConnection: github.com_rnwood
-              repositoryName: rnwood/smtp4dev
+              gitHubConnection: github.com_chz160
+              repositoryName: chz160/lpr4dev
               title: $(tag)
               tag: $(tag)
               tagSource: userSpecifiedTag
@@ -377,18 +377,18 @@ stages:
               addChangeLog: true
               releaseNotesInline: |
                 
-                [See full installation instructions and options](https://github.com/rnwood/smtp4dev/wiki/Installation)
+                [See full installation instructions and options](https://github.com/chz160/lpr4dev/wiki/Installation)
 
                 File Name | Description
                 -- | --
-                [Docker rnwood/smtp4dev:$(tag)](https://hub.docker.com/r/rnwood/smtp4dev/tags?page=&page_size=&ordering=&name=$(tag)) | Docker image (Linux and Windows)
-                [.NET tool Rnwood.Smtp4dev $(tag)](https://www.nuget.org/packages/Rnwood.Smtp4dev/$(tag)) | .NET tool
-                [Rnwood.Smtp4dev-win-x64-$(tag).zip](../../releases/download/$(tag)/Rnwood.Smtp4dev-win-x64-$(tag).zip) | Windows x64 binary standalone - Server edition
-                [Rnwood.Smtp4dev.Desktop-win-x64-$(tag).zip](../../releases/download/$(tag)/Rnwood.Smtp4dev.Desktop-win-x64-$(tag).zip) | Windows x64 binary standalone - Desktop app edition.
-                [Rnwood.Smtp4dev-win-arm64-$(tag).zip](../../releases/download/$(tag)/Rnwood.Smtp4dev-win-arm64-$(tag).zip) | Windows ARM 62-bit binary standalone
-                [Rnwood.Smtp4dev-linux-x64-$(tag).zip](../../releases/download/$(tag)/Rnwood.Smtp4dev-linux-x64-$(tag).zip) | Linux x64 (Intel 64 bit) binary standalone
-                [Rnwood.Smtp4dev-linux-musl-x64-$(tag).zip](../../releases/download/$(tag)/Rnwood.Smtp4dev-linux-musl-x64-$(tag).zip) | Linux MUSL x64 binary standalone for Linux distros using MUSL libc
-                [Rnwood.Smtp4dev-noruntime-$(tag).zip](../../releases/download/$(tag)/Rnwood.Smtp4dev-noruntime-$(tag).zip) | Architecture independent version. Should run on any platform where the .NET 8.0 (or greater) runtime is installed
+                [Docker chz160/lpr4dev:$(tag)](https://hub.docker.com/r/chz160/lpr4dev/tags?page=&page_size=&ordering=&name=$(tag)) | Docker image (Linux and Windows)
+                [.NET tool Lpr4dev $(tag)](https://www.nuget.org/packages/Lpr4dev/$(tag)) | .NET tool
+                [Lpr4dev-win-x64-$(tag).zip](../../releases/download/$(tag)/Lpr4dev-win-x64-$(tag).zip) | Windows x64 binary standalone - Server edition
+                [Lpr4dev.Desktop-win-x64-$(tag).zip](../../releases/download/$(tag)/Lpr4dev.Desktop-win-x64-$(tag).zip) | Windows x64 binary standalone - Desktop app edition.
+                [Lpr4dev-win-arm64-$(tag).zip](../../releases/download/$(tag)/Lpr4dev-win-arm64-$(tag).zip) | Windows ARM 62-bit binary standalone
+                [Lpr4dev-linux-x64-$(tag).zip](../../releases/download/$(tag)/Lpr4dev-linux-x64-$(tag).zip) | Linux x64 (Intel 64 bit) binary standalone
+                [Lpr4dev-linux-musl-x64-$(tag).zip](../../releases/download/$(tag)/Lpr4dev-linux-musl-x64-$(tag).zip) | Linux MUSL x64 binary standalone for Linux distros using MUSL libc
+                [Lpr4dev-noruntime-$(tag).zip](../../releases/download/$(tag)/Lpr4dev-noruntime-$(tag).zip) | Architecture independent version. Should run on any platform where the .NET 8.0 (or greater) runtime is installed
 
               ${{ if eq(variables['isreleasebuild'], true) }}:
                 action: edit
