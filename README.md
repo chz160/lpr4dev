@@ -59,4 +59,4 @@ Contributions, bug reports, and feature requests are welcome! Please open an iss
 ### License
 lpr4dev is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fchz160%2Flpr4dev.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fchz160%2Flpr4dev?ref=badge_large)
+<!-- [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fchz160%2Flpr4dev.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fchz160%2Flpr4dev?ref=badge_large) -->
