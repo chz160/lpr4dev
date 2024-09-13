@@ -7,12 +7,12 @@ using System.Text;
 
 namespace LprServer;
 
-/// <summary>Builds a multi line string where each line has the CRLF terminator required for SMTP.</summary>
+/// <summary>Builds a multi line string where each line has the CRLF terminator required for LPR.</summary>
 public class SmtpStringBuilder
 {
     private readonly StringBuilder innerStringBuilder = new();
 
-    /// <summary>Appends a line to the string and terminates it with the correct CRLF required for SMTP.</summary>
+    /// <summary>Appends a line to the string and terminates it with the correct CRLF required for LPR.</summary>
     /// <param name="text">The text.</param>
     public void AppendLine(string text)
     {

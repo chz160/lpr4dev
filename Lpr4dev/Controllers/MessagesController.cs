@@ -109,7 +109,7 @@ namespace Lpr4dev.Controllers
         }
 
         /// <summary>
-        /// Replies to the message with the specified ID using the configured relay SMTP server.
+        /// Replies to the message with the specified ID using the configured relay LPR server.
         /// </summary>
         /// <param name="id">The Id of the message to reply to</param>
         /// <param name="to">List of email addresses separated by commas</param>
@@ -158,7 +158,7 @@ namespace Lpr4dev.Controllers
         }
 
         /// <summary>
-        /// Sends a message via the configured upstream/relay SMTP server.
+        /// Sends a message via the configured upstream/relay LPR server.
         /// </summary>
         /// <param name="to">List of email addresses separated by commas</param>
         /// <param name="cc">List of email addresses separated by commas</param>

@@ -26,7 +26,7 @@ namespace Lpr4dev.Controllers
         }
 
         /// <summary>
-        /// Gets a a list of SMTP session summaries (without the details).
+        /// Gets a a list of LPR session summaries (without the details).
         /// </summary>
         /// <param name="page">The page number to get</param>
         /// <param name="pageSize">Maximum number of items to get</param>

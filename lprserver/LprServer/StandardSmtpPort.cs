@@ -16,12 +16,12 @@ public enum StandardSmtpPort
     AssignAutomatically = 0,
 
     /// <summary>
-    ///     Use the standard IANA SMTP port - 25
+    ///     Use the standard IANA LPR port - 25
     /// </summary>
-    SMTP = 25,
+    LPR = 25,
 
     /// <summary>
-    ///     Use the standard IANA SMTP-over-SSL port - 465
+    ///     Use the standard IANA LPR-over-SSL port - 465
     /// </summary>
-    SMTPOverSSL = 465
+    LPROverSSL = 465
 }

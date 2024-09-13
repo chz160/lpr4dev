@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LprServer.Extensions;
 
-/// <summary>Implements the SMTPUTF8 extension.</summary>
+/// <summary>Implements the LPRUTF8 extension.</summary>
 public class SmtpUtfEightExtension : IExtension
 {
     /// <summary>Creates the extension processor for a connection.</summary>
@@ -23,10 +23,10 @@ public class SmtpUtfEightExtension : IExtension
         {
             MailVerb mailVerbProcessor = connection.MailVerb;
             MailFromVerb mailFromProcessor = mailVerbProcessor.FromSubVerb;
-            mailFromProcessor.ParameterProcessorMap.SetProcessor("SMTPUTF8", new SmtpUtfEightParameterProcessor());
+            mailFromProcessor.ParameterProcessorMap.SetProcessor("LPRUTF8", new SmtpUtfEightParameterProcessor());
         }
 
-        public override Task<string[]> GetEHLOKeywords() => Task.FromResult(new[] { "SMTPUTF8" });
+        public override Task<string[]> GetEHLOKeywords() => Task.FromResult(new[] { "LPRUTF8" });
     }
 
     private sealed class SmtpUtfEightParameterProcessor : IParameterProcessor

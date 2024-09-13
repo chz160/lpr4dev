@@ -84,7 +84,7 @@
         </member>
         <member name="T:LprServer.ArgumentsParser">
             <summary>
-                Parses SMTP command arguments into an array of arguments.
+                Parses LPR command arguments into an array of arguments.
                 Arguments are separated by spaces or are enclosed within &lt;&gt;s which may contain spaces and balanced &lt;&gt;s.
                 Example:
                 <code>&lt;Noah Porch&lt;chz160@yahoo.com&gt;&gt; ARG2 ARG3</code>
@@ -317,7 +317,7 @@
         </member>
         <member name="T:LprServer.Connection">
             <summary>
-                Represents a single SMTP server from a client to the server.
+                Represents a single LPR server from a client to the server.
             </summary>
         </member>
         <member name="M:LprServer.Connection.#ctor(LprServer.ISmtpServer,LprServer.IEditableSession,LprServer.IConnectionChannel,LprServer.Verbs.IVerbMap,System.Func{LprServer.IConnection,LprServer.Extensions.IExtensionProcessor[]})">
@@ -1153,7 +1153,7 @@
             <inheritdoc />
         </member>
         <member name="T:LprServer.Extensions.SmtpUtfEightExtension">
-            <summary>Implements the SMTPUTF8 extension.</summary>
+            <summary>Implements the LPRUTF8 extension.</summary>
         </member>
         <member name="M:LprServer.Extensions.SmtpUtfEightExtension.CreateExtensionProcessor(LprServer.IConnection)">
             <summary>Creates the extension processor for a connection.</summary>
@@ -1886,7 +1886,7 @@
         </member>
         <member name="M:LprServer.IServerOptions.OnCommandReceived(LprServer.IConnection,LprServer.SmtpCommand)">
             <summary>
-                Called when a command received in the specified SMTP session.
+                Called when a command received in the specified LPR session.
             </summary>
             <param name="connection">The connection.</param>
             <param name="command">The command.</param>
@@ -1941,7 +1941,7 @@
         </member>
         <member name="M:LprServer.IServerOptions.OnSessionCompleted(LprServer.IConnection,LprServer.ISession)">
             <summary>
-                Called when a SMTP session is completed.
+                Called when a LPR session is completed.
             </summary>
             <param name="connection">The connection.</param>
             <param name="session">The session.</param>
@@ -1949,7 +1949,7 @@
         </member>
         <member name="M:LprServer.IServerOptions.OnSessionStarted(LprServer.IConnection,LprServer.ISession)">
             <summary>
-                Called when a new SMTP session is started.
+                Called when a new LPR session is started.
             </summary>
             <param name="connection">The connection.</param>
             <param name="session">The session.</param>
@@ -2586,7 +2586,7 @@
         </member>
         <member name="T:LprServer.SmtpCommand">
             <summary>
-                Defines the <see cref="T:LprServer.SmtpCommand" /> which implements parsing of an SMTP command received from client to server.
+                Defines the <see cref="T:LprServer.SmtpCommand" /> which implements parsing of an LPR command received from client to server.
             </summary>
         </member>
         <member name="M:LprServer.SmtpCommand.#ctor(System.String)">
@@ -2652,7 +2652,7 @@
         </member>
         <member name="T:LprServer.SmtpResponse">
             <summary>
-                Represents a SMTP response from server to client which is represented by a numeric code an optional descriptive
+                Represents a LPR response from server to client which is represented by a numeric code an optional descriptive
                 text.
             </summary>
             <seealso cref="T:System.IEquatable`1" />
@@ -2917,7 +2917,7 @@
             </summary>
         </member>
         <member name="T:LprServer.SmtpStreamReader">
-            <summary>A stream writer which uses the correct \r\n line ending required for SMTP protocol.</summary>
+            <summary>A stream writer which uses the correct \r\n line ending required for LPR protocol.</summary>
         </member>
         <member name="M:LprServer.SmtpStreamReader.#ctor(System.IO.Stream,System.Text.Encoding,System.Boolean)">
             <summary>Initializes a new instance of the <see cref="T:LprServer.SmtpStreamReader" /> class.</summary>
@@ -2947,7 +2947,7 @@
             </param>
         </member>
         <member name="T:LprServer.SmtpStreamWriter">
-            <summary>A stream writer which uses the correct \r\n line ending required for SMTP protocol.</summary>
+            <summary>A stream writer which uses the correct \r\n line ending required for LPR protocol.</summary>
         </member>
         <member name="M:LprServer.SmtpStreamWriter.#ctor(System.IO.Stream,System.Boolean)">
             <summary>Initializes a new instance of the <see cref="T:LprServer.SmtpStreamWriter" /> class.</summary>
@@ -2955,10 +2955,10 @@
             <param name="leaveOpen">True if stream should be closed when the writer is disposed.</param>
         </member>
         <member name="T:LprServer.SmtpStringBuilder">
-            <summary>Builds a multi line string where each line has the CRLF terminator required for SMTP.</summary>
+            <summary>Builds a multi line string where each line has the CRLF terminator required for LPR.</summary>
         </member>
         <member name="M:LprServer.SmtpStringBuilder.AppendLine(System.String)">
-            <summary>Appends a line to the string and terminates it with the correct CRLF required for SMTP.</summary>
+            <summary>Appends a line to the string and terminates it with the correct CRLF required for LPR.</summary>
             <param name="text">The text.</param>
         </member>
         <member name="M:LprServer.SmtpStringBuilder.ToString">
@@ -2975,14 +2975,14 @@
                 Select a free port number automatically
             </summary>
         </member>
-        <member name="F:LprServer.StandardSmtpPort.SMTP">
+        <member name="F:LprServer.StandardSmtpPort.LPR">
             <summary>
-                Use the standard IANA SMTP port - 25
+                Use the standard IANA LPR port - 25
             </summary>
         </member>
-        <member name="F:LprServer.StandardSmtpPort.SMTPOverSSL">
+        <member name="F:LprServer.StandardSmtpPort.LPROverSSL">
             <summary>
-                Use the standard IANA SMTP-over-SSL port - 465
+                Use the standard IANA LPR-over-SSL port - 465
             </summary>
         </member>
         <member name="T:LprServer.StandardSmtpResponseCode">

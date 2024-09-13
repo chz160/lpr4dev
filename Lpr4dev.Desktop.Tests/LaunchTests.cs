@@ -98,9 +98,9 @@ namespace Lpr4dev.Desktop.Tests
                             baseUrl = new Uri($"http://localhost:{portNumber}");
                         }
 
-                        if (newLine.StartsWith("SMTP Server is listening on port"))
+                        if (newLine.StartsWith("LPR Server is listening on port"))
                         {
-                            smtpPortNumber = int.Parse(Regex.Replace(newLine, @"SMTP Server is listening on port (\d+).*", "$1"));
+                            smtpPortNumber = int.Parse(Regex.Replace(newLine, @"LPR Server is listening on port (\d+).*", "$1"));
                         }
 
                         if (newLine.StartsWith("IMAP Server is listening on port"))

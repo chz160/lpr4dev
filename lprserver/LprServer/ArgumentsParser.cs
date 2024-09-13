@@ -9,7 +9,7 @@ using System.Text;
 namespace LprServer;
 
 /// <summary>
-///     Parses SMTP command arguments into an array of arguments.
+///     Parses LPR command arguments into an array of arguments.
 ///     Arguments are separated by spaces or are enclosed within &lt;&gt;s which may contain spaces and balanced &lt;&gt;s.
 ///     Example:
 ///     <code>&lt;Noah Porch&lt;chz160@yahoo.com&gt;&gt; ARG2 ARG3</code>

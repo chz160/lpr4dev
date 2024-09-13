@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace LprServer;
 
-/// <summary>A stream writer which uses the correct \r\n line ending required for SMTP protocol.</summary>
+/// <summary>A stream writer which uses the correct \r\n line ending required for LPR protocol.</summary>
 public class SmtpStreamReader : IDisposable
 {
     private readonly byte[] buffer = new byte[64 * 1024];

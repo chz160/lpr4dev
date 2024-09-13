@@ -8,7 +8,7 @@
             <el-form v-if="server" :model="this" ref="form" :rules="rules" :disabled="saving" scroll-to-error>
                 <el-tabs tab-position="top">
                     <el-tab-pane label="General">
-                        <el-form-item label="Hostname (SMTP, IMAP)" prop="server.hostName">
+                        <el-form-item label="Hostname (LPR, IMAP)" prop="server.hostName">
                             <el-input v-model="server.hostName" :disabled="server.lockedSettings.hostName">
                                 <template #prefix>
                                     <el-icon v-if="server.lockedSettings.hostName" :title="`Locked: ${server.lockedSettings.hostName}`"><Lock /></el-icon>
@@ -17,7 +17,7 @@
                         </el-form-item>
 
 
-                        <el-form-item label="Allow Remote Connections (SMTP, IMAP)" prop="server.allowRemoteConnections">
+                        <el-form-item label="Allow Remote Connections (LPR, IMAP)" prop="server.allowRemoteConnections">
 
                             <el-icon v-if="server.lockedSettings.allowRemoteConnections" :title="`Locked: ${server.lockedSettings.allowRemoteConnections}`"><Lock /></el-icon>
 
@@ -26,13 +26,13 @@
 
                         </el-form-item>
 
-                        <el-form-item label="Disable IPv6 (SMTP, IMAP)" prop="server.disableIPv6">
+                        <el-form-item label="Disable IPv6 (LPR, IMAP)" prop="server.disableIPv6">
                             <el-icon v-if="server.lockedSettings.disableIPv6" :title="`Locked: ${server.lockedSettings.disableIPv6}`"><Lock /></el-icon>
 
                             <el-switch v-model="server.disableIPv6" :disabled="server.lockedSettings.disableIPv6" />
                         </el-form-item>
 
-                        <el-form-item label="Require Authentication (SMTP, IMAP)" prop="server.authenticationRequired">
+                        <el-form-item label="Require Authentication (LPR, IMAP)" prop="server.authenticationRequired">
                             <el-icon v-if="server.lockedSettings.authenticationRequired" :title="`Locked: ${server.lockedSettings.authenticationRequired}`"><Lock /></el-icon>
 
                             <el-switch v-model="server.authenticationRequired" :disabled="server.lockedSettings.authenticationRequired" />
@@ -63,7 +63,7 @@
                             <el-switch v-model="server.disableMessageSanitisation" :disabled="server.lockedSettings.disableMessageSanitisation" />
                         </el-form-item>
                     </el-tab-pane>
-                    <el-tab-pane label="SMTP Server">
+                    <el-tab-pane label="LPR Server">
 
 
                         <el-form-item label="Port Number (0=auto assign)" prop="server.port">
@@ -173,7 +173,7 @@
                             <el-switch v-model="isRelayEnabled" :disabled="server.lockedSettings.relaySmtpServer" />
                         </el-form-item>
 
-                        <el-form-item label="SMTP server" prop="server.relaySmtpServer" v-show="isRelayEnabled">
+                        <el-form-item label="LPR server" prop="server.relaySmtpServer" v-show="isRelayEnabled">
 
                             <el-input v-model="server.relaySmtpServer" :disabled="server.lockedSettings.relaySmtpServer">
                                 <template #prefix>
@@ -182,7 +182,7 @@
                             </el-input>
                         </el-form-item>
 
-                        <el-form-item label="SMTP port" prop="server.relaySmtpPort" v-show="isRelayEnabled">
+                        <el-form-item label="LPR port" prop="server.relaySmtpPort" v-show="isRelayEnabled">
 
                             <el-input-number :min=1 :max=65535 controls-position="right" v-model="server.relaySmtpPort" :disabled="server.lockedSettings.relaySmtpPort">
                                 <template #prefix>
@@ -263,7 +263,7 @@
 
 
                         <el-form-item>
-                            Web/API, SMTP, IMAP Users:       <el-icon v-if="server.lockedSettings.users" :title="`Locked: ${server.lockedSettings.users}`"><Lock /></el-icon>
+                            Web/API, LPR, IMAP Users:       <el-icon v-if="server.lockedSettings.users" :title="`Locked: ${server.lockedSettings.users}`"><Lock /></el-icon>
 
                         </el-form-item>
 
@@ -396,8 +396,8 @@
             };
 
             if (this.isRelayEnabled) {
-                result.server.relaySmtpServer.push({ required: true, message: "SMTP server is required if relaying enabled" });
-                result.server.relaySmtpPort.push({ required: true, message: "SMTP port is required if relaying enabled" });
+                result.server.relaySmtpServer.push({ required: true, message: "LPR server is required if relaying enabled" });
+                result.server.relaySmtpPort.push({ required: true, message: "LPR port is required if relaying enabled" });
             }
 
             return result;

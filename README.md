@@ -1,12 +1,12 @@
 # <img src='Lpr4dev/ClientApp/public/logo.png' alt='logo'/>
-**lpr4dev - the fake SMTP email server for development and testing.**
+**lpr4dev - the fake LPR email server for development and testing.**
 
-A dummy SMTP server for Windows, Linux, Mac OS-X (and maybe elsewhere where .NET Core is available). Lets you test your application without spamming your real customers.
+A dummy LPR server for Windows, Linux, Mac OS-X (and maybe elsewhere where .NET Core is available). Lets you test your application without spamming your real customers.
 
 lpr4dev support many advanced features:
 - OpenAPI/Swagger API
 - IMAP access to retrieve and delete messages
-- SMTP session logging
+- LPR session logging
 - UTF8 support
 - Viewport size switcher to simulate mobile etc
 - Multipart MIME inspector

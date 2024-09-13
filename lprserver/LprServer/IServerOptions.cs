@@ -111,7 +111,7 @@ public interface IServerOptions
     Task<bool> IsSSLEnabled(IConnection connection);
 
     /// <summary>
-    ///     Called when a command received in the specified SMTP session.
+    ///     Called when a command received in the specified LPR session.
     /// </summary>
     /// <param name="connection">The connection.</param>
     /// <param name="command">The command.</param>
@@ -166,7 +166,7 @@ public interface IServerOptions
     Task OnMessageStart(IConnection connection, string from);
 
     /// <summary>
-    ///     Called when a SMTP session is completed.
+    ///     Called when a LPR session is completed.
     /// </summary>
     /// <param name="connection">The connection.</param>
     /// <param name="session">The session.</param>
@@ -174,7 +174,7 @@ public interface IServerOptions
     Task OnSessionCompleted(IConnection connection, ISession session);
 
     /// <summary>
-    ///     Called when a new SMTP session is started.
+    ///     Called when a new LPR session is started.
     /// </summary>
     /// <param name="connection">The connection.</param>
     /// <param name="session">The session.</param>

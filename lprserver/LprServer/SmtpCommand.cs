@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 namespace LprServer;
 
 /// <summary>
-///     Defines the <see cref="SmtpCommand" /> which implements parsing of an SMTP command received from client to server.
+///     Defines the <see cref="SmtpCommand" /> which implements parsing of an LPR command received from client to server.
 /// </summary>
 public sealed class SmtpCommand : IEquatable<SmtpCommand>
 {

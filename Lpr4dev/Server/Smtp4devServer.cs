@@ -140,7 +140,7 @@ namespace Lpr4dev.Server
         private void OnIsRunningChanged(object sender, EventArgs e)
         {
             if (this.smtpServer.IsRunning) return;
-            log.Information("SMTP server stopped.");
+            log.Information("LPR server stopped.");
             this.notificationsHub.OnServerChanged().Wait();
         }
 
@@ -171,7 +171,7 @@ namespace Lpr4dev.Server
 
         public void Stop()
         {
-            log.Information("SMTP server stopping...");
+            log.Information("LPR server stopping...");
             this.smtpServer?.Stop(true);
         }
 
@@ -245,7 +245,7 @@ namespace Lpr4dev.Server
 
             if (result == null && this.serverOptions.CurrentValue.SmtpAllowAnyCredentials)
             {
-                this.log.Information("SMTP auth success (allow any credentials is on)");
+                this.log.Information("LPR auth success (allow any credentials is on)");
                 result = AuthenticationResult.Success;
             }
 
@@ -257,19 +257,19 @@ namespace Lpr4dev.Server
                     if (user != null && val.ValidateResponse(user.Password))
                     {
                         result = AuthenticationResult.Success;
-                        this.log.Information("SMTP auth success for user {user}", val.Username);
+                        this.log.Information("LPR auth success for user {user}", val.Username);
 
                     }
                     else
                     {
                         result = AuthenticationResult.Failure;
-                        this.log.Warning("SMTP auth failure for user {user}", val.Username);
+                        this.log.Warning("LPR auth failure for user {user}", val.Username);
                     }
                 }
                 else
                 {
                     result = AuthenticationResult.Failure;
-                    this.log.Warning("SMTP auth failure: Cannot validate credentials of type {type}", e.Credentials.Type);
+                    this.log.Warning("LPR auth failure: Cannot validate credentials of type {type}", e.Credentials.Type);
                 }
             }
 
@@ -571,7 +571,7 @@ namespace Lpr4dev.Server
 
                 foreach (var l in smtpServer.ListeningEndpoints)
                 {
-                    log.Information("SMTP Server is listening on port {smtpPortNumber} ({address}).",
+                    log.Information("LPR Server is listening on port {smtpPortNumber} ({address}).",
                         l.Port, l.Address);
                 }
 
@@ -580,7 +580,7 @@ namespace Lpr4dev.Server
             }
             catch (Exception e)
             {
-                log.Fatal(e, "The SMTP server failed to start: {failureReason}", e.ToString());
+                log.Fatal(e, "The LPR server failed to start: {failureReason}", e.ToString());
                 this.Exception = e;
             }
             finally
@@ -608,7 +608,7 @@ namespace Lpr4dev.Server
 
             if (relaySmtpClient == null)
             {
-                throw new InvalidOperationException("Relay SMTP server must be configued to send messages.");
+                throw new InvalidOperationException("Relay LPR server must be configued to send messages.");
             }
 
             MimeMessage message = new MimeMessage();

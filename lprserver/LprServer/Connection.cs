@@ -21,7 +21,7 @@ using LprServer.Verbs;
 namespace LprServer;
 
 /// <summary>
-///     Represents a single SMTP server from a client to the server.
+///     Represents a single LPR server from a client to the server.
 /// </summary>
 public class Connection : IConnection
 {

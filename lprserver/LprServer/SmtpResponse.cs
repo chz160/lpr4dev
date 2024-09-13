@@ -9,7 +9,7 @@ using System.Globalization;
 namespace LprServer;
 
 /// <summary>
-///     Represents a SMTP response from server to client which is represented by a numeric code an optional descriptive
+///     Represents a LPR response from server to client which is represented by a numeric code an optional descriptive
 ///     text.
 /// </summary>
 /// <seealso cref="System.IEquatable{T}" />

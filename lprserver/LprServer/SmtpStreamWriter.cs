@@ -8,7 +8,7 @@ using System.Text;
 
 namespace LprServer;
 
-/// <summary>A stream writer which uses the correct \r\n line ending required for SMTP protocol.</summary>
+/// <summary>A stream writer which uses the correct \r\n line ending required for LPR protocol.</summary>
 public class SmtpStreamWriter : StreamWriter
 {
     /// <summary>Initializes a new instance of the <see cref="SmtpStreamWriter" /> class.</summary>
