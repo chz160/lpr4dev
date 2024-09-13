@@ -12,7 +12,7 @@ namespace LprServer;
 ///     Parses SMTP command arguments into an array of arguments.
 ///     Arguments are separated by spaces or are enclosed within &lt;&gt;s which may contain spaces and balanced &lt;&gt;s.
 ///     Example:
-///     <code>&lt;Robert Wood&lt;rob@rnwood.co.uk&gt;&gt; ARG2 ARG3</code>
+///     <code>&lt;Noah Porch&lt;chz160@yahoo.com&gt;&gt; ARG2 ARG3</code>
 ///     Results in 3 arguments.
 /// </summary>
 public class ArgumentsParser

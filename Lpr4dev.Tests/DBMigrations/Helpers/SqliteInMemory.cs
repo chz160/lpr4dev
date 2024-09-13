@@ -13,15 +13,15 @@ namespace Lpr4dev.Tests.DBMigrations.Helpers
 
         public SqliteInMemory()
         {
-            this.ContextOptions = new DbContextOptionsBuilder<Smtp4devDbContext>()
+            this.ContextOptions = new DbContextOptionsBuilder<Lpr4devDbContext>()
                 .UseSqlite($"Data Source=file:cachedb{Guid.NewGuid()}?mode=memory&cache=shared")
                 .Options;
             _connection = RelationalOptionsExtension.Extract(ContextOptions).Connection;
-            using var context = new Smtp4devDbContext(ContextOptions);
+            using var context = new Lpr4devDbContext(ContextOptions);
             context.Database.Migrate();
         }
 
-        protected internal DbContextOptions<Smtp4devDbContext> ContextOptions { get; }
+        protected internal DbContextOptions<Lpr4devDbContext> ContextOptions { get; }
 
   
 

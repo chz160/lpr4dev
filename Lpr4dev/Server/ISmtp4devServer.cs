@@ -7,7 +7,7 @@ using Lpr4dev.DbModel;
 
 namespace Lpr4dev.Server
 {
-    public interface ISmtp4devServer
+    public interface ILpr4devServer
     {
         RelayResult TryRelayMessage(Message message, MailboxAddress[] overrideRecipients);
         Exception Exception { get; }

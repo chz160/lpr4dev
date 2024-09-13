@@ -30,8 +30,8 @@ public class ArgumentsParserTests
     [Fact]
     public void Parsing_MailFrom_EmailOnly()
     {
-        ArgumentsParser args = new ArgumentsParser("<rob@rnwood.co.uk> ARG1 ARG2");
-        Assert.Equal("<rob@rnwood.co.uk>", args.Arguments.First());
+        ArgumentsParser args = new ArgumentsParser("<chz160@yahoo.com> ARG1 ARG2");
+        Assert.Equal("<chz160@yahoo.com>", args.Arguments.First());
         Assert.Equal("ARG1", args.Arguments.ElementAt(1));
         Assert.Equal("ARG2", args.Arguments.ElementAt(2));
     }
@@ -42,8 +42,8 @@ public class ArgumentsParserTests
     [Fact]
     public void Parsing_MailFrom_WithDisplayName()
     {
-        ArgumentsParser args = new ArgumentsParser("<Robert Wood<rob@rnwood.co.uk>> ARG1 ARG2");
-        Assert.Equal("<Robert Wood<rob@rnwood.co.uk>>", args.Arguments.First());
+        ArgumentsParser args = new ArgumentsParser("<Noah Porch<chz160@yahoo.com>> ARG1 ARG2");
+        Assert.Equal("<Noah Porch<chz160@yahoo.com>>", args.Arguments.First());
         Assert.Equal("ARG1", args.Arguments.ElementAt(1));
         Assert.Equal("ARG2", args.Arguments.ElementAt(2));
     }

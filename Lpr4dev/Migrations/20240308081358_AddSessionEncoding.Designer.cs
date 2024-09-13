@@ -10,7 +10,7 @@ using Lpr4dev.Data;
 
 namespace Lpr4dev.Migrations
 {
-    [DbContext(typeof(Smtp4devDbContext))]
+    [DbContext(typeof(Lpr4devDbContext))]
     [Migration("20240308081358_AddSessionEncoding")]
     partial class AddSessionEncoding
     {

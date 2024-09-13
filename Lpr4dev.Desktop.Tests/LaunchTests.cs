@@ -29,9 +29,9 @@ namespace Lpr4dev.Desktop.Tests
         protected void RunE2ETest(Action<E2ETestContext> test)
         {
 
-            string workingDir = Environment.GetEnvironmentVariable("SMTP4DEV_E2E_WORKINGDIR");
-            string binary = Environment.GetEnvironmentVariable("SMTP4DEV_E2E_BINARY");
-            List<string> args = Environment.GetEnvironmentVariable("SMTP4DEV_E2E_ARGS")?.Split("\n", StringSplitOptions.RemoveEmptyEntries)
+            string workingDir = Environment.GetEnvironmentVariable("LPR4DEV_E2E_WORKINGDIR");
+            string binary = Environment.GetEnvironmentVariable("LPR4DEV_E2E_BINARY");
+            List<string> args = Environment.GetEnvironmentVariable("LPR4DEV_E2E_ARGS")?.Split("\n", StringSplitOptions.RemoveEmptyEntries)
                 ?.ToList() ?? new List<string>();
 
             if (string.IsNullOrEmpty(workingDir))

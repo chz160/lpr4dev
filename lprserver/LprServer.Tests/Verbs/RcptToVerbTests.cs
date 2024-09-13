@@ -19,7 +19,7 @@ public class RcptToVerbTests
     /// <returns>A <see cref="Task{T}" /> representing the async operation</returns>
     [Fact]
     public async Task EmailAddressOnly() =>
-        await TestGoodAddressAsync("<rob@rnwood.co.uk>", "rob@rnwood.co.uk");
+        await TestGoodAddressAsync("<chz160@yahoo.com>", "chz160@yahoo.com");
 
     /// <summary>
     /// </summary>
@@ -27,7 +27,7 @@ public class RcptToVerbTests
     [Fact]
     public async Task EmailAddressWithDisplayName() =>
         //Should this format be accepted????
-        await TestGoodAddressAsync("<Robert Wood<rob@rnwood.co.uk>>", "Robert Wood<rob@rnwood.co.uk>")
+        await TestGoodAddressAsync("<Noah Porch<chz160@yahoo.com>>", "Noah Porch<chz160@yahoo.com>")
             ;
 
     /// <summary>
@@ -44,8 +44,8 @@ public class RcptToVerbTests
     [Fact]
     public async Task MismatchedBraket_ReturnsError()
     {
-        await TestBadAddressAsync("<rob@rnwood.co.uk");
-        await TestBadAddressAsync("<Robert Wood<rob@rnwood.co.uk>");
+        await TestBadAddressAsync("<chz160@yahoo.com");
+        await TestBadAddressAsync("<Noah Porch<chz160@yahoo.com>");
     }
 
     /// <summary>
@@ -54,12 +54,12 @@ public class RcptToVerbTests
     /// <returns>A <see cref="Task{T}" /> representing the async operation</returns>
     [Fact]
     public async Task UnbraketedAddress_ReturnsError() =>
-        await TestBadAddressAsync("rob@rnwood.co.uk");
+        await TestBadAddressAsync("chz160@yahoo.com");
 
 
     [Fact]
     public async Task NonAsciiAddress_SmtpUtf8_Accepted() =>
-        await TestGoodAddressAsync("<ظػؿقط <rob@rnwood.co.uk>>", "ظػؿقط <rob@rnwood.co.uk>", true)
+        await TestGoodAddressAsync("<ظػؿقط <chz160@yahoo.com>>", "ظػؿقط <chz160@yahoo.com>", true)
             ;
 
 

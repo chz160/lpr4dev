@@ -19,6 +19,6 @@ namespace Lpr4dev.Data
 
         Task<DbModel.Message> TryGetMessageById(Guid id, bool tracked);
 
-        Smtp4devDbContext DbContext { get; }
+        Lpr4devDbContext DbContext { get; }
     }
 }

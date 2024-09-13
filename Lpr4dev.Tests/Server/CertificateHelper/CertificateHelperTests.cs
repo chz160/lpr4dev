@@ -9,8 +9,8 @@ namespace Lpr4dev.Tests.Server.CertificateHelper
         [Fact]
         public void CanLoadCertificateAndKey()
         {
-            var certificatePath = ResourceHelper.GetResourcePath("smtp4dev.crt");
-            var certificateKeyPath = ResourceHelper.GetResourcePath("smtp4dev.key");
+            var certificatePath = ResourceHelper.GetResourcePath("lpr4dev.crt");
+            var certificateKeyPath = ResourceHelper.GetResourcePath("lpr4dev.key");
 
             var cert = Lpr4dev.Server.CertificateHelper.LoadCertificateWithKey(certificatePath, certificateKeyPath, "");
 

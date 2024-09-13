@@ -24,7 +24,7 @@ namespace Lpr4dev.Controllers
     [UseEtagFilterAttribute]
     public class MessagesController : Controller
     {
-        public MessagesController(IMessagesRepository messagesRepository, ISmtp4devServer server)
+        public MessagesController(IMessagesRepository messagesRepository, ILpr4devServer server)
         {
             this.messagesRepository = messagesRepository;
             this.server = server;
@@ -32,7 +32,7 @@ namespace Lpr4dev.Controllers
 
         private const int CACHE_DURATION = 31556926;
         private readonly IMessagesRepository messagesRepository;
-        private readonly ISmtp4devServer server;
+        private readonly ILpr4devServer server;
 
         /// <summary>
         /// Returns all new messages since the provided message ID. Returns only the summary without message content.

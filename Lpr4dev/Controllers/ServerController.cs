@@ -23,7 +23,7 @@ namespace Lpr4dev.Controllers
     [ApiController]
     public class ServerController : Controller
     {
-        public ServerController(ISmtp4devServer server, ImapServer imapServer, IOptionsMonitor<ServerOptions> serverOptions,
+        public ServerController(ILpr4devServer server, ImapServer imapServer, IOptionsMonitor<ServerOptions> serverOptions,
             IOptionsMonitor<RelayOptions> relayOptions, IOptionsMonitor<DesktopOptions> desktopOptions, CommandLineOptions cmdLineOptions, IHostingEnvironmentHelper hostingEnvironmentHelper)
         {
             this.server = server;
@@ -35,7 +35,7 @@ namespace Lpr4dev.Controllers
             this.cmdLineOptions = cmdLineOptions;
         }
 
-        private readonly ISmtp4devServer server;
+        private readonly ILpr4devServer server;
         private readonly ImapServer imapServer;
         private readonly IOptionsMonitor<ServerOptions> serverOptions;
         private readonly IOptionsMonitor<RelayOptions> relayOptions;
@@ -44,7 +44,7 @@ namespace Lpr4dev.Controllers
         private readonly CommandLineOptions cmdLineOptions;
 
         /// <summary>
-        /// Gets the current state and settings for the smtp4dev server.
+        /// Gets the current state and settings for the lpr4dev server.
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -170,9 +170,9 @@ namespace Lpr4dev.Controllers
         }
 
         /// <summary>
-        /// Updates the state of and settings for the smtp4dev server.
+        /// Updates the state of and settings for the lpr4dev server.
         /// </summary>
-        /// Settings can not be updated if disabled in smtp4dev settings or if the settings file is not writable.
+        /// Settings can not be updated if disabled in lpr4dev settings or if the settings file is not writable.
         /// <param name="serverUpdate"></param>
         [HttpPost]
         [SwaggerResponse(System.Net.HttpStatusCode.OK, typeof(void), Description = "If settings were successfully updated and state changes initiated (not not applied synchronously and can fail).")]

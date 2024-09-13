@@ -8,7 +8,7 @@ namespace Lpr4dev
         public static string GetDataDir(CommandLineOptions options)
         {
             return string.IsNullOrEmpty(options.BaseAppDataPath)
-                ? Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "smtp4dev")
+                ? Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "lpr4dev")
                 : options.BaseAppDataPath;
         }
     }

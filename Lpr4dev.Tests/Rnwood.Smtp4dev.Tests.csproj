@@ -6,15 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\smtp4dev.crt" />
-    <None Remove="Resources\smtp4dev.key" />
+    <None Remove="Resources\lpr4dev.crt" />
+    <None Remove="Resources\lpr4dev.key" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Resources\smtp4dev.crt">
+    <Content Include="Resources\lpr4dev.crt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\smtp4dev.key">
+    <Content Include="Resources\lpr4dev.key">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

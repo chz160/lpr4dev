@@ -22,8 +22,8 @@ public class SmtpStreamReaderTests
 
     [Fact]
     public async Task ReadLine_WithUtf8Chars() =>
-        await Test("MAIL FROM <ظػؿقط <rob@rnwood.co.uk>>\r\n", Encoding.UTF8,
-            new[] { "MAIL FROM <ظػؿقط <rob@rnwood.co.uk>>" });
+        await Test("MAIL FROM <ظػؿقط <chz160@yahoo.com>>\r\n", Encoding.UTF8,
+            new[] { "MAIL FROM <ظػؿقط <chz160@yahoo.com>>" });
 
 
     [Fact]

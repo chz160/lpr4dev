@@ -24,7 +24,7 @@ variables:
     tag: $[ format('{0}{1:yyyyMMdd}{2}', variables['CIBUILDVERSIONPREFIX'], pipeline.startTime, counter(format('{0:yyyyMMdd}', pipeline.startTime), 100)) ]
 
   docker_repo: "chz160/lpr4dev"
-  docker_registry: "dockerhub-rnwood"
+  docker_registry: "dockerhub-chz160"
   netcoresdk_version: "8.0.201"
 
 stages:
@@ -228,10 +228,10 @@ stages:
           # - task: DotNetCoreCLI@2
           #   displayName: Run Tests
           #   env:
-          #     SMTP4DEV_E2E_WORKINGDIR: $(Agent.TempDirectory)
-          #     SMTP4DEV_E2E_USEDEFAULTDBPATH: 1
-          #     SMTP4DEV_E2E_BINARY: docker
-          #     SMTP4DEV_E2E_ARGS: |
+          #     LPR4DEV_E2E_WORKINGDIR: $(Agent.TempDirectory)
+          #     LPR4DEV_E2E_USEDEFAULTDBPATH: 1
+          #     LPR4DEV_E2E_BINARY: docker
+          #     LPR4DEV_E2E_ARGS: |
           #       run
           #       -i
           #       -p
@@ -364,11 +364,11 @@ stages:
               command: "push"
               packagesToPush: "$(Build.ArtifactStagingDirectory)/dotnetglobaltool/*.nupkg"
               nuGetFeedType: "external"
-              publishFeedCredentials: "nuget_rnwood"
+              publishFeedCredentials: "nuget_chz160"
 
           - task: GitHubRelease@1
             inputs:
-              gitHubConnection: github.com_rnwood
+              gitHubConnection: github.com_chz160
               repositoryName: chz160/lpr4dev
               title: $(tag)
               tag: $(tag)

@@ -6,9 +6,9 @@ using Lpr4dev.DbModel;
 
 namespace Lpr4dev.Data
 {
-    public class Smtp4devDbContext : DbContext
+    public class Lpr4devDbContext : DbContext
     {
-        public Smtp4devDbContext(DbContextOptions<Smtp4devDbContext> options)
+        public Lpr4devDbContext(DbContextOptions<Lpr4devDbContext> options)
             : base(options)
         {
 

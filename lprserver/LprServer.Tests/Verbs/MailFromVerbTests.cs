@@ -20,7 +20,7 @@ public class MailFromVerbTests
     /// <returns>A <see cref="Task{T}" /> representing the async operation</returns>
     [Fact]
     public async Task Process_Address_Bracketed() =>
-        await Process_AddressAsync("<rob@rnwood.co.uk>", "rob@rnwood.co.uk", StandardSmtpResponseCode.OK)
+        await Process_AddressAsync("<chz160@yahoo.com>", "chz160@yahoo.com", StandardSmtpResponseCode.OK)
             ;
 
     /// <summary>
@@ -29,7 +29,7 @@ public class MailFromVerbTests
     /// <returns>A <see cref="Task{T}" /> representing the async operation</returns>
     [Fact]
     public async Task Process_Address_BracketedWithName() =>
-        await Process_AddressAsync("<Robert Wood <rob@rnwood.co.uk>>", "Robert Wood <rob@rnwood.co.uk>",
+        await Process_AddressAsync("<Noah Porch <chz160@yahoo.com>>", "Noah Porch <chz160@yahoo.com>",
             StandardSmtpResponseCode.OK);
 
     /// <summary>
@@ -38,7 +38,7 @@ public class MailFromVerbTests
     /// <returns>A <see cref="Task{T}" /> representing the async operation</returns>
     [Fact]
     public async Task Process_NonAsciiChars_SmtpUtf8_Accepted() =>
-        await Process_AddressAsync("<ظػؿقط <rob@rnwood.co.uk>>", "ظػؿقط <rob@rnwood.co.uk>",
+        await Process_AddressAsync("<ظػؿقط <chz160@yahoo.com>>", "ظػؿقط <chz160@yahoo.com>",
             StandardSmtpResponseCode.OK, eightBitMessage: true);
 
     /// <summary>
@@ -47,7 +47,7 @@ public class MailFromVerbTests
     /// <returns>A <see cref="Task{T}" /> representing the async operation</returns>
     [Fact]
     public async Task Process_Address_Plain() =>
-        await Process_AddressAsync("rob@rnwood.co.uk", "rob@rnwood.co.uk", StandardSmtpResponseCode.OK)
+        await Process_AddressAsync("chz160@yahoo.com", "chz160@yahoo.com", StandardSmtpResponseCode.OK)
             ;
 
     /// <summary>

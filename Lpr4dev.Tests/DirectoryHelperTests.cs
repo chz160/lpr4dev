@@ -12,7 +12,7 @@ namespace Lpr4dev.Tests
 
         public DirectoryHelperTests()
         {
-            appDataPath = Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "smtp4dev");
+            appDataPath = Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "lpr4dev");
         }
 
         [Fact]

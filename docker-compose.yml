@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  smtp4dev:
+  lpr4dev:
     image: chz160/lpr4dev:v3
     restart: always
     ports:
@@ -12,21 +12,21 @@ services:
       # Change the number before : to the port the IMAP server should be accessible on
       - '143:143'
     volumes:
-      # This is where smtp4dev stores the database..
-        - smtp4dev-data:/smtp4dev
+      # This is where lpr4dev stores the database..
+        - lpr4dev-data:/lpr4dev
     environment:
       # Uncomment to customise these settings
       # This is not a complete list of the available settings.
       # See the documentation in appsettings.json for a full list.
 
-      #Specifies the virtual path from web server root where SMTP4DEV web interface will be hosted. e.g. "/" or "/smtp4dev"
-      #- ServerOptions__BasePath=/smtp4dev
+      #Specifies the virtual path from web server root where LPR4DEV web interface will be hosted. e.g. "/" or "/lpr4dev"
+      #- ServerOptions__BasePath=/lpr4dev
 
       #Specifies the URLs the web UI will use inside the container.
       - ServerOptions__Urls=http://*:80
 
       #Specifies the server hostname. Used in auto-generated TLS certificate if enabled.
-      - ServerOptions__HostName=smtp4dev
+      - ServerOptions__HostName=lpr4dev
 
       #Locks settings from being changed by user via web interface
       #- ServerOptions__LockSettings=true
@@ -68,4 +68,4 @@ services:
       #"ServerOptions__ImapPort"=143
 
 volumes:
-  smtp4dev-data:
+  lpr4dev-data:

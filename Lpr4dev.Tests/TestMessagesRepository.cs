@@ -22,7 +22,7 @@ namespace Lpr4dev.Tests
             return Task.CompletedTask;
         }
 
-        public Smtp4devDbContext DbContext => throw new NotImplementedException();
+        public Lpr4devDbContext DbContext => throw new NotImplementedException();
 
         public Task DeleteMessage(Guid id)
         {

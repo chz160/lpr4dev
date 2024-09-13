@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>LprServer is an SMTP server component that can be embedded in application to allow them to receive and process emails using the SMTP protocol. This component powers the popular Smtp4dev application.</Description>
+    <Description>LprServer is an SMTP server component that can be embedded in application to allow them to receive and process emails using the SMTP protocol. This component powers the popular Lpr4dev application.</Description>
     <Copyright>Robert N. Wood</Copyright>
     <VersionPrefix>3.0</VersionPrefix>
-    <Authors>Robert N. Wood &lt;rob@rnwood.co.uk&gt;</Authors>
+    <Authors>Robert N. Wood &lt;chz160@yahoo.com&gt;</Authors>
     <AssemblyName>LprServer</AssemblyName>
     <OutputType>Library</OutputType>
     <PackageId>LprServer</PackageId>
-    <PackageProjectUrl>http://github.com/rnwood/smtpserver</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/rnwood/smtpserver/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>http://github.com/chz160/lprserver</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/chz160/lprserver/blob/master/LICENSE.md</PackageLicenseUrl>
     <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>

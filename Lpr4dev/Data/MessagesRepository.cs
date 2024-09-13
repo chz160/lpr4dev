@@ -12,16 +12,16 @@ namespace Lpr4dev.Data
     {
         private readonly ITaskQueue taskQueue;
         private readonly NotificationsHub notificationsHub;
-        private readonly Smtp4devDbContext dbContext;
+        private readonly Lpr4devDbContext dbContext;
 
-        public MessagesRepository(ITaskQueue taskQueue, NotificationsHub notificationsHub, Smtp4devDbContext dbContext)
+        public MessagesRepository(ITaskQueue taskQueue, NotificationsHub notificationsHub, Lpr4devDbContext dbContext)
         {
             this.taskQueue = taskQueue;
             this.notificationsHub = notificationsHub;
             this.dbContext = dbContext;
         }
 
-        public Smtp4devDbContext DbContext => this.dbContext;
+        public Lpr4devDbContext DbContext => this.dbContext;
 
         public Task MarkAllMessagesRead(string mailbox)
         {

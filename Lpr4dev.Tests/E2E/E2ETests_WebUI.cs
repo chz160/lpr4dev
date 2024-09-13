@@ -29,7 +29,7 @@ namespace Lpr4dev.Tests.E2E
         [Theory]
         [InlineData("/", false)]
         [InlineData("/", true)]
-        [InlineData("/smtp4dev", true)]
+        [InlineData("/lpr4dev", true)]
         public void CheckMessageIsReceivedAndDisplayed(string basePath, bool inMemoryDb)
         {
             RunUITest($"{nameof(CheckMessageIsReceivedAndDisplayed)}-{basePath}-{inMemoryDb}", (browser, baseUrl, smtpPortNumber) =>

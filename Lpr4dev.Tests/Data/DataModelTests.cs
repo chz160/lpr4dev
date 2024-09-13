@@ -19,7 +19,7 @@ namespace Lpr4dev.Tests.Data
         public async Task CanDeleteSessionWhenMessageExist()
         {
             var sqlLiteForTesting = new SqliteInMemory();
-            var context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            var context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
 
             DbModel.Session session = new DbModel.Session();
             context.Add(session);

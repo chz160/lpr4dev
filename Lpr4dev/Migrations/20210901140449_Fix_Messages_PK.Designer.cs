@@ -8,7 +8,7 @@ using Lpr4dev.Data;
 
 namespace Lpr4dev.Migrations
 {
-    [DbContext(typeof(Smtp4devDbContext))]
+    [DbContext(typeof(Lpr4devDbContext))]
     [Migration("20210901140449_Fix_Messages_PK")]
     partial class Fix_Messages_PK
     {

@@ -3,7 +3,7 @@
         <el-header height="35" style="display:flex; flex-wrap:wrap; align-items: end; column-gap: 12px;">
             <div style="flex: 0 0 content">
                 <a href="https://github.com/chz160/lpr4dev/" target="_blank">
-                    <img height="35" src="/logo.png" alt="smtp4dev" />
+                    <img height="35" src="/logo.png" alt="lpr4dev" />
                 </a>
             </div>
 

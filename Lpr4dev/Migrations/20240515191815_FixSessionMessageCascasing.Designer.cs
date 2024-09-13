@@ -10,7 +10,7 @@ using Lpr4dev.Data;
 
 namespace Lpr4dev.Migrations
 {
-    [DbContext(typeof(Smtp4devDbContext))]
+    [DbContext(typeof(Lpr4devDbContext))]
     [Migration("20240515191815_FixSessionMessageCascasing")]
     partial class FixSessionMessageCascasing
     {

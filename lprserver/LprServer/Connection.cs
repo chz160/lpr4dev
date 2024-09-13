@@ -207,7 +207,7 @@ public class Connection : IConnection
 
             await WriteResponse(new SmtpResponse(
                 StandardSmtpResponseCode.ServiceReady,
-                Server.Options.DomainName + " smtp4dev ready")).ConfigureAwait(false);
+                Server.Options.DomainName + " lpr4dev ready")).ConfigureAwait(false);
 
             while (ConnectionChannel.IsConnected)
             {

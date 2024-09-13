@@ -43,7 +43,7 @@ namespace Lpr4dev.Desktop
 
                 trayIcon = new TrayIconWithContextMenu(Guid.NewGuid().ToString());
                 trayIcon.Icon = new Icon(File.OpenRead(Path.Combine(AppContext.BaseDirectory, "app/icon.ico"))).Handle;
-                trayIcon.ToolTip = "smtp4dev";
+                trayIcon.ToolTip = "lpr4dev";
 
                 toggleVisibleMenuItem = new PopupMenuItem("Hide", (_, _) => SetVisibility(isHidden));
                 toggleConsoleMenuItem = new PopupMenuItem("Show console", (_, _) => UpdateConsoleVisbilty(!consoleVisible));
@@ -213,14 +213,14 @@ namespace Lpr4dev.Desktop
             Console.Error.WriteLine(error);
 
 
-            var window = CreateWindow(workingDir, "about:blank", $"smtp4dev - {title}");
+            var window = CreateWindow(workingDir, "about:blank", $"lpr4dev - {title}");
             window.LoadRawString($"<html><h1>{HttpUtility.HtmlEncode(title)}</h1><pre>{HttpUtility.HtmlEncode(error)}</pre><button type='button' onclick='window.close()'>Close</button></body></html>");
             window.WaitForClose();
 
             Environment.Exit(1);
         }
 
-        private static PhotinoWindow CreateWindow(string workingDir, string baseUrl, string title = "smtp4dev")
+        private static PhotinoWindow CreateWindow(string workingDir, string baseUrl, string title = "lpr4dev")
         {
             var iconFile = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
     ? "app/icon.ico"

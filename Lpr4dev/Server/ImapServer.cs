@@ -100,7 +100,7 @@ namespace Lpr4dev.Server
             {
 
                 Bindings = bindings.ToArray(),
-                GreetingText = "smtp4dev"
+                GreetingText = "lpr4dev"
             };
             imapServer.SessionCreated += (o, ea) => new SessionHandler(ea.Session, scriptingHost, serverOptions, this.serviceScopeFactory);
 

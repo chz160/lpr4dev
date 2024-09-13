@@ -80,8 +80,8 @@ namespace Lpr4dev
             _log = Log.ForContext<Program>();
 
             string version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
-            _log.Information("smtp4dev version {version}", version);
-            _log.Information("https://github.com/rnwood/smtp4dev");
+            _log.Information("lpr4dev version {version}", version);
+            _log.Information("https://github.com/chz160/lpr4dev");
             _log.Information(".NET Core runtime version: {netcoreruntime}", System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription);
 
 
@@ -209,12 +209,12 @@ namespace Lpr4dev
                     }
 
                     services.AddSingleton(cmdLineOptions);
-                    services.AddHostedService(sp => (Smtp4devServer)sp.GetRequiredService<ISmtp4devServer>());
+                    services.AddHostedService(sp => (Lpr4devServer)sp.GetRequiredService<ILpr4devServer>());
                     services.AddHostedService(sp => sp.GetRequiredService<ImapServer>());
                 });
             });
 
-            builder.UseWindowsService(s => s.ServiceName = "smtp4dev");
+            builder.UseWindowsService(s => s.ServiceName = "lpr4dev");
         
 
 
@@ -245,7 +245,7 @@ namespace Lpr4dev
     .ReadFrom.Configuration(configuration);
                 if (args.Any(a => a.Equals("--service", StringComparison.OrdinalIgnoreCase)))
                 {
-                    logConfigBuilder.WriteTo.EventLog("smtp4dev");
+                    logConfigBuilder.WriteTo.EventLog("lpr4dev");
                 }
                 Log.Logger = logConfigBuilder
                     .CreateLogger();
@@ -256,7 +256,7 @@ namespace Lpr4dev
                 var logConfigBuilder = new LoggerConfiguration();
                 if (args.Any(a => a.Equals("--service", StringComparison.OrdinalIgnoreCase)))
                 {
-                    logConfigBuilder.WriteTo.EventLog("smtp4dev");
+                    logConfigBuilder.WriteTo.EventLog("lpr4dev");
                 }else
                 {
                     logConfigBuilder.WriteTo.Console();

@@ -9,8 +9,8 @@ using Lpr4dev.Data;
 
 namespace Lpr4dev.Migrations
 {
-    [DbContext(typeof(Smtp4devDbContext))]
-    partial class Smtp4devDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(Lpr4devDbContext))]
+    partial class Lpr4devDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

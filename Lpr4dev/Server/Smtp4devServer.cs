@@ -39,11 +39,11 @@ using Org.BouncyCastle.Bcpg.OpenPgp;
 
 namespace Lpr4dev.Server
 {
-    internal class Smtp4devServer : ISmtp4devServer, IHostedService
+    internal class Lpr4devServer : ILpr4devServer, IHostedService
     {
-        private readonly ILogger log = Log.ForContext<Smtp4devServer>();
+        private readonly ILogger log = Log.ForContext<Lpr4devServer>();
 
-        public Smtp4devServer(IServiceScopeFactory serviceScopeFactory, IOptionsMonitor<Settings.ServerOptions> serverOptions,
+        public Lpr4devServer(IServiceScopeFactory serviceScopeFactory, IOptionsMonitor<Settings.ServerOptions> serverOptions,
             IOptionsMonitor<RelayOptions> relayOptions, NotificationsHub notificationsHub, Func<RelayOptions, SmtpClient> relaySmtpClientFactory,
             ITaskQueue taskQueue, ScriptingHost scriptingHost)
         {
@@ -110,7 +110,7 @@ namespace Lpr4dev.Server
         {
             var sessionId = activeSessionsToDbId[e.Message.Session];
             using var scope = serviceScopeFactory.CreateScope();
-            Smtp4devDbContext dbContext = scope.ServiceProvider.GetService<Smtp4devDbContext>();
+            Lpr4devDbContext dbContext = scope.ServiceProvider.GetService<Lpr4devDbContext>();
             var session = dbContext.Sessions.AsNoTracking().Single(s => s.Id == sessionId);
             var apiSession = new ApiModel.Session(session);
 
@@ -156,7 +156,7 @@ namespace Lpr4dev.Server
             var apiMessage = new ApiModel.Message(message);
 
             using var scope = serviceScopeFactory.CreateScope();
-            Smtp4devDbContext dbContext = scope.ServiceProvider.GetService<Smtp4devDbContext>();
+            Lpr4devDbContext dbContext = scope.ServiceProvider.GetService<Lpr4devDbContext>();
             Session dbSession = dbContext.Sessions.Find(activeSessionsToDbId[e.Connection.Session]);
 
             var apiSession = new ApiModel.Session(dbSession);
@@ -180,7 +180,7 @@ namespace Lpr4dev.Server
         {
             //Mark sessions as ended.
             using var scope = serviceScopeFactory.CreateScope();
-            Smtp4devDbContext dbContext = scope.ServiceProvider.GetService<Smtp4devDbContext>();
+            Lpr4devDbContext dbContext = scope.ServiceProvider.GetService<Lpr4devDbContext>();
             dbContext.Sessions.Where(s => !s.EndDate.HasValue).ExecuteUpdate(u => u.SetProperty(s => s.EndDate, DateTime.Now));
 
             //Find mailboxes in config not in DB and create
@@ -236,7 +236,7 @@ namespace Lpr4dev.Server
 
             var sessionId = activeSessionsToDbId[e.Session];
             using var scope = serviceScopeFactory.CreateScope();
-            Smtp4devDbContext dbContext = scope.ServiceProvider.GetService<Smtp4devDbContext>();
+            Lpr4devDbContext dbContext = scope.ServiceProvider.GetService<Lpr4devDbContext>();
             var session = dbContext.Sessions.Single(s => s.Id == sessionId);
 
             var apiSession = new ApiModel.Session(session);
@@ -301,7 +301,7 @@ namespace Lpr4dev.Server
             await taskQueue.QueueTask(() =>
             {
                 using var scope = serviceScopeFactory.CreateScope();
-                Smtp4devDbContext dbContext = scope.ServiceProvider.GetService<Smtp4devDbContext>();
+                Lpr4devDbContext dbContext = scope.ServiceProvider.GetService<Lpr4devDbContext>();
 
                 Session dbSession = new Session();
                 UpdateDbSession(e.Session, dbSession).Wait();
@@ -322,7 +322,7 @@ namespace Lpr4dev.Server
             await taskQueue.QueueTask(() =>
             {
                 using var scope = serviceScopeFactory.CreateScope();
-                Smtp4devDbContext dbContext = scope.ServiceProvider.GetService<Smtp4devDbContext>();
+                Lpr4devDbContext dbContext = scope.ServiceProvider.GetService<Lpr4devDbContext>();
 
                 Session dbSession = dbContext.Sessions.Find(activeSessionsToDbId[e.Session]);
                 UpdateDbSession(e.Session, dbSession).Wait();
@@ -343,7 +343,7 @@ namespace Lpr4dev.Server
             return taskQueue.QueueTask(() =>
             {
                 using var scope = serviceScopeFactory.CreateScope();
-                Smtp4devDbContext dbContext = scope.ServiceProvider.GetService<Smtp4devDbContext>();
+                Lpr4devDbContext dbContext = scope.ServiceProvider.GetService<Lpr4devDbContext>();
                 Session session = dbContext.Sessions.SingleOrDefault(s => s.Id == id);
                 if (session != null)
                 {
@@ -359,7 +359,7 @@ namespace Lpr4dev.Server
             return taskQueue.QueueTask(() =>
             {
                 using var scope = serviceScopeFactory.CreateScope();
-                Smtp4devDbContext dbContext = scope.ServiceProvider.GetService<Smtp4devDbContext>();
+                Lpr4devDbContext dbContext = scope.ServiceProvider.GetService<Lpr4devDbContext>();
                 dbContext.Sessions.RemoveRange(dbContext.Sessions.Where(s => s.EndDate.HasValue));
                 dbContext.SaveChanges();
                 notificationsHub.OnSessionsChanged().Wait();
@@ -436,7 +436,7 @@ namespace Lpr4dev.Server
         {
             log.Information("Processing received message for mailbox '{mailbox}' for recipients '{recipients}'", targetMailboxWithRecipients.Key.Name, targetMailboxWithRecipients.ToArray());
             using var scope = serviceScopeFactory.CreateScope();
-            Smtp4devDbContext dbContext = scope.ServiceProvider.GetService<Smtp4devDbContext>();
+            Lpr4devDbContext dbContext = scope.ServiceProvider.GetService<Lpr4devDbContext>();
 
             message.Session = dbContext.Sessions.Find(activeSessionsToDbId[session]);
             message.Mailbox = dbContext.Mailboxes.FirstOrDefault(m => m.Name == targetMailboxWithRecipients.Key.Name);
@@ -529,7 +529,7 @@ namespace Lpr4dev.Server
             return result;
         }
 
-        private void TrimMessages(Smtp4devDbContext dbContext)
+        private void TrimMessages(Lpr4devDbContext dbContext)
         {
             foreach (var mailbox in dbContext.Mailboxes)
             {
@@ -538,7 +538,7 @@ namespace Lpr4dev.Server
             }
         }
 
-        private void TrimSessions(Smtp4devDbContext dbContext)
+        private void TrimSessions(Lpr4devDbContext dbContext)
         {
             dbContext.Sessions.RemoveRange(dbContext.Sessions.Where(s => s.EndDate.HasValue).OrderByDescending(m => m.EndDate)
                 .Skip(serverOptions.CurrentValue.NumberOfSessionsToKeep));

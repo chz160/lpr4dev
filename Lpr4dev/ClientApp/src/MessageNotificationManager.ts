@@ -41,7 +41,7 @@ export default class MessageNotificationManager {
                     clearTimeout(this.visibleNotificationCloseTimeout);
                 }
 
-                const notification = this.currentNotification = new Notification("smtp4dev: " + this.unnotifiedMessages.length + " new message(s) received.", {
+                const notification = this.currentNotification = new Notification("lpr4dev: " + this.unnotifiedMessages.length + " new message(s) received.", {
                     body: this.unnotifiedMessages.slice(0, 5).map(m => "From: " + m.from + " - " + m.subject).join("\n") + (this.unnotifiedMessages.length > 5 ? "..." : ""),
                     tag: "newmessages",
                     silent: (!!this.currentNotification),

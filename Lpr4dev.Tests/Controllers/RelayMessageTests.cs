@@ -21,16 +21,16 @@ namespace Lpr4dev.Tests.Controllers
     {
         private readonly MessagesController controller;
         private readonly IMessagesRepository messagesRepository;
-        private readonly ISmtp4devServer server;
-        private readonly Smtp4devDbContext context;
+        private readonly ILpr4devServer server;
+        private readonly Lpr4devDbContext context;
 
         public RelayMessagesTests()
         {
             messagesRepository = Substitute.For<IMessagesRepository>();
-            server = Substitute.For<ISmtp4devServer>();
+            server = Substitute.For<ILpr4devServer>();
             controller = new MessagesController(messagesRepository, server);
             var sqlLiteForTesting = new SqliteInMemory();
-            context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
             InitRepo();
             messagesRepository.GetMessages(Arg.Any<string>(), Arg.Any<bool>())
                 .Returns(context.Messages);

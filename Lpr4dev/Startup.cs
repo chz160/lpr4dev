@@ -48,7 +48,7 @@ namespace Lpr4dev
             services.AddOpenApiDocument(config =>
             {
                 config.DocumentName = "v1";
-                config.Title = "smtp4dev";
+                config.Title = "lpr4dev";
                 config.Version = "v1";
                 config.PostProcess = d =>
                 {
@@ -66,7 +66,7 @@ namespace Lpr4dev
 
             ServerOptions serverOptions = Configuration.GetSection("ServerOptions").Get<ServerOptions>();
 
-            services.AddDbContext<Smtp4devDbContext>(opt =>
+            services.AddDbContext<Lpr4devDbContext>(opt =>
                     {
                         if (string.IsNullOrEmpty(serverOptions.Database))
                         {
@@ -93,7 +93,7 @@ namespace Lpr4dev
 
 
 
-                        using var context = new Smtp4devDbContext((DbContextOptions<Smtp4devDbContext>)opt.Options);
+                        using var context = new Lpr4devDbContext((DbContextOptions<Lpr4devDbContext>)opt.Options);
                         if (string.IsNullOrEmpty(serverOptions.Database))
                         {
                             context.Database.Migrate();
@@ -132,7 +132,7 @@ namespace Lpr4dev
                     }, ServiceLifetime.Scoped, ServiceLifetime.Singleton);
 
 
-            services.AddSingleton<ISmtp4devServer, Smtp4devServer>();
+            services.AddSingleton<ILpr4devServer, Lpr4devServer>();
             services.AddSingleton<ImapServer>();
             services.AddScoped<IMessagesRepository, MessagesRepository>();
             services.AddScoped<IHostingEnvironmentHelper, HostingEnvironmentHelper>();
@@ -172,7 +172,7 @@ namespace Lpr4dev
             services.AddSpaStaticFiles(o => o.RootPath = "ClientApp");
 
             services.AddAuthentication(BasicDefaults.AuthenticationScheme)
-            .AddBasic<UserValidationService>(options => { options.Realm = "smtp4dev"; });
+            .AddBasic<UserValidationService>(options => { options.Realm = "lpr4dev"; });
 
 
             services.AddAuthorization(options =>
@@ -201,7 +201,7 @@ namespace Lpr4dev
                 {
                     c.Path = "/api";
                     c.DocumentPath = "/api/{documentName}/swagger.json";
-                    c.DocumentTitle = "smtp4dev API";
+                    c.DocumentTitle = "lpr4dev API";
                 });
                 subdir.UseRouting();
                 subdir.UseAuthentication();

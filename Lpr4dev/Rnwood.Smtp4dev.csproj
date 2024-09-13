@@ -17,7 +17,7 @@
   <PropertyGroup Condition="'$(PackAsTool)'=='true'">
     <StaticWebAssetsEnabled>false</StaticWebAssetsEnabled>
     <PackAsTool>true</PackAsTool>
-    <ToolCommandName>smtp4dev</ToolCommandName>
+    <ToolCommandName>lpr4dev</ToolCommandName>
     <PackageOutputPath>./bin/pkg</PackageOutputPath>
     <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
   </PropertyGroup>

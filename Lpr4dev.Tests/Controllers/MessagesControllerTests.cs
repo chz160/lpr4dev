@@ -183,7 +183,7 @@ namespace Lpr4dev.Tests.Controllers
             DbModel.Message testMessage2 = await GetTestMessage("Message subject2");
             DbModel.Message testMessage3 = await GetTestMessage("Message subject3");
             var sqlLiteForTesting = new SqliteInMemory();
-            var context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            var context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
             MessagesRepository messagesRepository =
                 new MessagesRepository(Substitute.For<ITaskQueue>(), Substitute.For<NotificationsHub>(), context);
             messagesRepository.DbContext.Messages.AddRange(testMessage1, testMessage2, testMessage3);

@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0.8 AS runtime
 COPY out /app
-VOLUME ["/smtp4dev"]
+VOLUME ["/lpr4dev"]
 WORKDIR /
 ENV XDG_CONFIG_HOME /
 ENV ASPNETCORE_HTTP_PORTS 80

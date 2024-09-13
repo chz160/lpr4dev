@@ -16,10 +16,10 @@ namespace Lpr4dev.Controllers
     [UseEtagFilterAttribute]
     public class SessionsController : Controller
     {
-        private readonly Smtp4devDbContext dbContext;
-        private readonly ISmtp4devServer server;
+        private readonly Lpr4devDbContext dbContext;
+        private readonly ILpr4devServer server;
 
-        public SessionsController(Smtp4devDbContext dbContext, ISmtp4devServer server)
+        public SessionsController(Lpr4devDbContext dbContext, ILpr4devServer server)
         {
             this.dbContext = dbContext;
             this.server = server;

@@ -117,7 +117,7 @@ namespace Lpr4dev.Service
 
             if (IsRunningInProcessIIS())
             {
-                dataDir = Path.Join(hostEnvironment.ContentRootPath, "smtp4dev");
+                dataDir = Path.Join(hostEnvironment.ContentRootPath, "lpr4dev");
             }
             else if (commandLineOptions.CurrentValue.NoUserSettings)
             {
@@ -125,7 +125,7 @@ namespace Lpr4dev.Service
             }
             else
             {
-                dataDir = Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "smtp4dev");
+                dataDir = Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "lpr4dev");
             }
             return Path.Join(dataDir, "appsettings.json");
         }

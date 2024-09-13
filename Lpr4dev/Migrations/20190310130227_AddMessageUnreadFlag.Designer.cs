@@ -9,7 +9,7 @@ using Lpr4dev.DbModel;
 
 namespace Lpr4dev.Migrations
 {
-    [DbContext(typeof(Smtp4devDbContext))]
+    [DbContext(typeof(Lpr4devDbContext))]
     [Migration("20190310130227_AddMessageUnreadFlag")]
     partial class AddMessageUnreadFlag
     {

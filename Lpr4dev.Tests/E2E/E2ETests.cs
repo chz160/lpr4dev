@@ -42,10 +42,10 @@ namespace Lpr4dev.Tests.E2E
         {
             options ??= new E2ETestOptions();
 
-            string workingDir = Environment.GetEnvironmentVariable("SMTP4DEV_E2E_WORKINGDIR");
-            string binary = Environment.GetEnvironmentVariable("SMTP4DEV_E2E_BINARY");
-            bool useDefaultDBPath = Environment.GetEnvironmentVariable("SMTP4DEV_E2E_USEDEFAULTDBPATH") == "1";
-            List<string> args = Environment.GetEnvironmentVariable("SMTP4DEV_E2E_ARGS")?.Split("\n", StringSplitOptions.RemoveEmptyEntries)
+            string workingDir = Environment.GetEnvironmentVariable("LPR4DEV_E2E_WORKINGDIR");
+            string binary = Environment.GetEnvironmentVariable("LPR4DEV_E2E_BINARY");
+            bool useDefaultDBPath = Environment.GetEnvironmentVariable("LPR4DEV_E2E_USEDEFAULTDBPATH") == "1";
+            List<string> args = Environment.GetEnvironmentVariable("LPR4DEV_E2E_ARGS")?.Split("\n", StringSplitOptions.RemoveEmptyEntries)
                 ?.ToList() ?? new List<string>();
 
             if (string.IsNullOrEmpty(workingDir))

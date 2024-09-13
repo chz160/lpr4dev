@@ -5,7 +5,7 @@ using Lpr4dev.ApiModel;
 namespace Lpr4dev.Controllers
 {
     /// <summary>
-    /// Returns information about the version of smtp4dev
+    /// Returns information about the version of lpr4dev
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
@@ -13,7 +13,7 @@ namespace Lpr4dev.Controllers
     public class VersionController : Controller
     {
         /// <summary>
-        /// Gets version infomation about smtp4dev.
+        /// Gets version infomation about lpr4dev.
         /// </summary>
         /// <returns></returns>
         [HttpGet]

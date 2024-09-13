@@ -8,7 +8,7 @@ namespace Lpr4dev.Tests.Server.SSCertGenerator
         [Fact]
         public void CanGenerateSelfSignedCertificate()
         {
-            var cert = Smtp4dev.Server.SSCertGenerator.CreateSelfSignedCertificate("localhost");
+            var cert = Lpr4dev.Server.SSCertGenerator.CreateSelfSignedCertificate("localhost");
             cert.Should().NotBeNull();
         }
     }

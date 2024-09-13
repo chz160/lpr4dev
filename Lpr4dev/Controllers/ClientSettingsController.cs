@@ -18,7 +18,7 @@ namespace Lpr4dev.Controllers
         }
 
         /// <summary>
-        /// Gets client settings for the smtp4dev UI.
+        /// Gets client settings for the lpr4dev UI.
         /// </summary>
         [HttpGet]
         [SwaggerResponse(System.Net.HttpStatusCode.OK, typeof(ClientSettings), Description = "")]

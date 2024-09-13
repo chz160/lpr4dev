@@ -42,7 +42,7 @@ namespace Lpr4dev.Tests
             DbModel.Message testMessage2 = await GetTestMessage("Message subject2");
             DbModel.Message testMessage3 = await GetTestMessage("Message subject3");
             var sqlLiteForTesting = new SqliteInMemory();
-            var context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            var context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
 
             context.AddRange(testMessage1, testMessage2, testMessage3);
             context.SaveChanges();
@@ -70,7 +70,7 @@ namespace Lpr4dev.Tests
             DbModel.Message testMessage2 = await GetTestMessage("Message subject2", to: "to2@to.com");
             DbModel.Message testMessage3 = await GetTestMessage("Message subject3", to: "to3@to.com");
             var sqlLiteForTesting = new SqliteInMemory();
-            var context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            var context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
 
             context.AddRange(testMessage1, testMessage2, testMessage3);
             context.SaveChanges();
@@ -99,7 +99,7 @@ namespace Lpr4dev.Tests
             DbModel.Message testMessage2 = await GetTestMessage("Message subject2", from: "to2@to.com");
             DbModel.Message testMessage3 = await GetTestMessage("Message subject3", from: "to3@to.com");
             var sqlLiteForTesting = new SqliteInMemory();
-            var context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            var context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
 
             context.AddRange(testMessage1, testMessage2, testMessage3);
             context.SaveChanges();
@@ -127,7 +127,7 @@ namespace Lpr4dev.Tests
             DbModel.Message testMessage2 = await GetTestMessage("Message subject2", unread: true);
             DbModel.Message testMessage3 = await GetTestMessage("Message subject3", unread: false);
             var sqlLiteForTesting = new SqliteInMemory();
-            var context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            var context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
 
             context.AddRange(testMessage1, testMessage2, testMessage3);
             context.SaveChanges();
@@ -149,7 +149,7 @@ namespace Lpr4dev.Tests
             DbModel.Message testMessage2 = await GetTestMessage("Message subject2", unread: true);
             DbModel.Message testMessage3 = await GetTestMessage("Message subject3", unread: false);
             var sqlLiteForTesting = new SqliteInMemory();
-            var context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            var context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
 
             context.AddRange(testMessage1, testMessage2, testMessage3);
             context.SaveChanges();
@@ -171,7 +171,7 @@ namespace Lpr4dev.Tests
             DbModel.Message testMessage2 = await GetTestMessage("Message subject2");
             DbModel.Message testMessage3 = await GetTestMessage("Message subject3");
             var sqlLiteForTesting = new SqliteInMemory();
-            var context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            var context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
 
             context.AddRange(testMessage1, testMessage2, testMessage3);
             context.SaveChanges();
@@ -193,7 +193,7 @@ namespace Lpr4dev.Tests
             DbModel.Message testMessage2 = await GetTestMessage("Message subject2");
             DbModel.Message testMessage3 = await GetTestMessage("Message subject3");
             var sqlLiteForTesting = new SqliteInMemory();
-            var context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            var context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
 
             context.AddRange(testMessage1, testMessage2, testMessage3);
             context.SaveChanges();
@@ -220,7 +220,7 @@ namespace Lpr4dev.Tests
             DbModel.Message testMessage2 = await GetTestMessage("Message subject2");
             DbModel.Message testMessage3 = await GetTestMessage("Message subject3");
             var sqlLiteForTesting = new SqliteInMemory();
-            var context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            var context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
 
             context.AddRange(testMessage1, testMessage2, testMessage3);
             context.SaveChanges();
@@ -250,7 +250,7 @@ namespace Lpr4dev.Tests
             DbModel.Message testMessage2 = await GetTestMessage("Message subject2");
             DbModel.Message testMessage3 = await GetTestMessage("Message subject3");
             var sqlLiteForTesting = new SqliteInMemory();
-            var context = new Smtp4devDbContext(sqlLiteForTesting.ContextOptions);
+            var context = new Lpr4devDbContext(sqlLiteForTesting.ContextOptions);
 
             context.AddRange(testMessage1, testMessage2, testMessage3);
             context.SaveChanges();

@@ -47,9 +47,9 @@
     <MSBuild Projects="../Lpr4dev/Lpr4dev.csproj" Targets="Publish" Properties="Configuration=$(Configuration);Platform=$(Platform);RuntimeIdentifier=$(RuntimeIdentifier);SelfContained=$(SelfContained);PublishDir=$(MSBuildProjectDirectory)\$(BaseIntermediateOutputPath)\server"></MSBuild>
 
     <ItemGroup>
-      <Smtp4DevRuntimeFiles Include="$(MSBuildProjectDirectory)\$(BaseIntermediateOutputPath)\server\wwwroot\**\*" />
+      <Lpr4DevRuntimeFiles Include="$(MSBuildProjectDirectory)\$(BaseIntermediateOutputPath)\server\wwwroot\**\*" />
     </ItemGroup>
-    <Copy SourceFiles="@(Smtp4DevRuntimeFiles)" DestinationFolder="$(MSBuildProjectDirectory)\wwwroot\%(RecursiveDir)" />
+    <Copy SourceFiles="@(Lpr4DevRuntimeFiles)" DestinationFolder="$(MSBuildProjectDirectory)\wwwroot\%(RecursiveDir)" />
     <ItemGroup>
       <Content Include="$(MSBuildProjectDirectory)\wwwroot\**">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>

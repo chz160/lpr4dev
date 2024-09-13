@@ -9,7 +9,7 @@ using Lpr4dev.DbModel;
 
 namespace Lpr4dev.Migrations
 {
-    [DbContext(typeof(Smtp4devDbContext))]
+    [DbContext(typeof(Lpr4devDbContext))]
     [Migration("20210211134331_AddMessageSecurity")]
     partial class AddMessageSecurity
     {
