@@ -23,7 +23,7 @@ variables:
   ${{ if not(startsWith(variables['Build.SourceBranch'], 'refs/tags/')) }}:
     tag: $[ format('{0}{1:yyyyMMdd}{2}', variables['CIBUILDVERSIONPREFIX'], pipeline.startTime, counter(format('{0:yyyyMMdd}', pipeline.startTime), 100)) ]
 
-  docker_repo: "rnwood/smtp4dev"
+  docker_repo: "chz160/lpr4dev"
   docker_registry: "dockerhub-rnwood"
   netcoresdk_version: "8.0.201"
 
@@ -95,28 +95,28 @@ stages:
             displayName: Build $(platformName)
             inputs:
               command: build
-              projects: Rnwood.Smtp4dev/Rnwood.Smtp4dev.csproj
+              projects: Lpr4dev/Lpr4dev.csproj
               publishWebProjects: false
               arguments: '-c Release $(buildArgs) -p:version=$(tag)'
           - task: DotNetCoreCLI@2
             displayName: Publish $(platformName)
             inputs:
               command: publish
-              projects: Rnwood.Smtp4dev/Rnwood.Smtp4dev.csproj
+              projects: Lpr4dev/Lpr4dev.csproj
               publishWebProjects: false
               arguments: '-c Release $(buildArgs) -p:version=$(tag) -o "$(Build.ArtifactStagingDirectory)/$(platformName)"'
           - task: ExtractFiles@1
             displayName: Extract files for E2E tests
             condition: eq(variables['runTests'], true)
             inputs:
-              archiveFilePatterns: '$(Build.ArtifactStagingDirectory)/$(platformName)/Rnwood.Smtp4dev.zip'
+              archiveFilePatterns: '$(Build.ArtifactStagingDirectory)/$(platformName)/Lpr4dev.zip'
               destinationFolder: $(Agent.TempDirectory)/e2e
           - task: DotNetCoreCLI@2
             condition: eq(variables['runTests'], true)
-            displayName: Run SmtpServer Tests
+            displayName: Run LprServer Tests
             inputs:
               command: test
-              projects: Rnwood.SmtpServer.Tests
+              projects: LprServer.Tests
               configuration: release
           - task: DotNetCoreCLI@2
             condition: eq(variables['runTests'], true)
