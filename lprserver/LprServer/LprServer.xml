@@ -147,7 +147,7 @@
                 The actual number of bytes written into <paramref name="bytes">bytes</paramref>.
             </returns>
         </member>
-        <member name="M:LprnBitTruncatingEncoding.GetCharCount(System.Byte[],System.Int32,System.Int32)">
+        <member name="M:LprServer.AsciiSevenBitTruncatingEncoding.GetCharCount(System.Byte[],System.Int32,System.Int32)">
             <summary>
                 When overridden in a derived class, calculates the number of characters produced by decoding a sequence of bytes
                 from the specified byte array.
@@ -342,7 +342,7 @@
         <member name="P:LprServer.Connection.Server">
             <inheritdoc />
         </member>
-        <member name="P:Lpronnection.Session">
+        <member name="P:LprServer.Connection.Session">
             <inheritdoc />
         </member>
         <member name="P:LprServer.Connection.VerbMap">
@@ -465,7 +465,7 @@
             </summary>
             <seealso cref="T:LprServer.ICurrentDateTimeProvider" />
         </member>
-        <member name="M:LprteTimeProvider.GetCurrentDateTime">
+        <member name="M:LprServer.CurrentDateTimeProvider.GetCurrentDateTime">
             <inheritdoc />
         </member>
         <member name="T:LprServer.DataAccessMode">

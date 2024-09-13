@@ -196,7 +196,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\smtpserver\LprServer\LprServer.csproj" />
+    <ProjectReference Include="..\lprserver\LprServer\LprServer.csproj" />
   </ItemGroup>
 
   <ItemGroup>

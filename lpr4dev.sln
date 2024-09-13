@@ -16,11 +16,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lpr4dev.Desktop", "Lpr4dev.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lpr4dev.Desktop.Tests", "Lpr4dev.Desktop.Tests\Lpr4dev.Desktop.Tests.csproj", "{44686E8D-112A-4506-BD48-432E99D2D0DC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "smtpserver", "smtpserver", "{C875E342-CCB7-4983-8017-7E06514635B2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lprserver", "lprserver", "{C875E342-CCB7-4983-8017-7E06514635B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LprServer", "smtpserver\LprServer\LprServer.csproj", "{0855B45D-AA9E-4683-AE6C-7057282D4E6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LprServer", "lprserver\LprServer\LprServer.csproj", "{0855B45D-AA9E-4683-AE6C-7057282D4E6B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LprServer.Tests", "smtpserver\LprServer.Tests\LprServer.Tests.csproj", "{BBABDD2E-7A9B-4406-BE15-B4EEE2FF037E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LprServer.Tests", "lprserver\LprServer.Tests\LprServer.Tests.csproj", "{BBABDD2E-7A9B-4406-BE15-B4EEE2FF037E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
