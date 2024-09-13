@@ -2,7 +2,7 @@
     <el-container class="fill hfillpanel">
         <el-header height="35" style="display:flex; flex-wrap:wrap; align-items: end; column-gap: 12px;">
             <div style="flex: 0 0 content">
-                <a href="https://github.com/rnwood/smtp4dev/" target="_blank">
+                <a href="https://github.com/chz160/lpr4dev/" target="_blank">
                     <img height="35" src="/logo.png" alt="smtp4dev" />
                 </a>
             </div>
@@ -123,10 +123,10 @@
                     window.open("/api");
                     break;
                 case "help":
-                    window.open("https://github.com/rnwood/smtp4dev/wiki");
+                    window.open("https://github.com/chz160/lpr4dev/wiki");
                     break;
                 case "issues":
-                    window.open("https://github.com/rnwood/smtp4dev/issues");
+                    window.open("https://github.com/chz160/lpr4dev/issues");
                     break;
 
                 default:

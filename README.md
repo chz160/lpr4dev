@@ -17,20 +17,20 @@ smtp4dev support many advanced features:
 - Reply, compose and relay messages including rules to auto relay
 - Scripting expressions including error simulation
 
-*If you're looking for the older v2 Windows only GUI version. [Grab it here](https://github.com/rnwood/smtp4dev/releases/tag/v2.0.10).*
+*If you're looking for the older v2 Windows only GUI version. [Grab it here](https://github.com/chz160/lpr4dev/releases/tag/v2.0.10).*
 
 > <a style="float: right" href="https://www.patreon.com/bePatron?u=38204828" data-patreon-widget-type="become-patron-button"><img alt='Become a Patreon' src='https://c5.patreon.com/external/logo/become_a_patron_button.png' height="30px"></a> <a  style="float: right" href='https://www.paypal.me/rnwood'><img alt='Donate' src='https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png'/></a> *If you find smtp4dev useful, please consider supporting further development by making a donation*
 > .
 
 
 ## Getting Started
-[Installation Instructions](https://github.com/rnwood/smtp4dev/wiki/Installation)
+[Installation Instructions](https://github.com/chz160/lpr4dev/wiki/Installation)
 
-[Configuration](https://github.com/rnwood/smtp4dev/wiki/Configuration)
+[Configuration](https://github.com/chz160/lpr4dev/wiki/Configuration)
 
-[Configuring your programs to send mails to smtp4dev](https://github.com/rnwood/smtp4dev/wiki/Configuring-Clients)
+[Configuring your programs to send mails to smtp4dev](https://github.com/chz160/lpr4dev/wiki/Configuring-Clients)
 
-[API] (https://github.com/rnwood/smtp4dev/wiki/API)
+[API] (https://github.com/chz160/lpr4dev/wiki/API)
 
 ## Screenshots
 

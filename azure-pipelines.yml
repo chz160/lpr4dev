@@ -369,7 +369,7 @@ stages:
           - task: GitHubRelease@1
             inputs:
               gitHubConnection: github.com_rnwood
-              repositoryName: rnwood/smtp4dev
+              repositoryName: chz160/lpr4dev
               title: $(tag)
               tag: $(tag)
               tagSource: userSpecifiedTag
@@ -377,11 +377,11 @@ stages:
               addChangeLog: true
               releaseNotesInline: |
                 
-                [See full installation instructions and options](https://github.com/rnwood/smtp4dev/wiki/Installation)
+                [See full installation instructions and options](https://github.com/chz160/lpr4dev/wiki/Installation)
 
                 File Name | Description
                 -- | --
-                [Docker rnwood/smtp4dev:$(tag)](https://hub.docker.com/r/rnwood/smtp4dev/tags?page=&page_size=&ordering=&name=$(tag)) | Docker image (Linux and Windows)
+                [Docker chz160/lpr4dev:$(tag)](https://hub.docker.com/r/chz160/lpr4dev/tags?page=&page_size=&ordering=&name=$(tag)) | Docker image (Linux and Windows)
                 [.NET tool Lpr4dev $(tag)](https://www.nuget.org/packages/Lpr4dev/$(tag)) | .NET tool
                 [Lpr4dev-win-x64-$(tag).zip](../../releases/download/$(tag)/Lpr4dev-win-x64-$(tag).zip) | Windows x64 binary standalone - Server edition
                 [Lpr4dev.Desktop-win-x64-$(tag).zip](../../releases/download/$(tag)/Lpr4dev.Desktop-win-x64-$(tag).zip) | Windows x64 binary standalone - Desktop app edition.
