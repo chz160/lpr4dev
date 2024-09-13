@@ -2,7 +2,7 @@
 <RunSettings>
   <RunConfiguration>
     <EnvironmentVariables>
-      <LPR4DEV_E2E_CHROMEEXE>C:\Users\Rob\Downloads\Chrome-bin\chrome.exe</LPR4DEV_E2E_CHROMEEXE>
+      <LPR4DEV_E2E_CHROMEEXE>C:\Users\chz160\Downloads\Chrome-bin\chrome.exe</LPR4DEV_E2E_CHROMEEXE>
     </EnvironmentVariables>
   </RunConfiguration>
 </RunSettings>

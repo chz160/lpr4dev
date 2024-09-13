@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <Description>LprServer is an LPR server component that can be embedded in application to allow them to receive and process emails using the LPR protocol. This component powers the popular Lpr4dev application.</Description>
-    <Copyright>Robert N. Wood</Copyright>
+    <Copyright>Noah Porch</Copyright>
     <VersionPrefix>3.0</VersionPrefix>
-    <Authors>Robert N. Wood &lt;chz160@yahoo.com&gt;</Authors>
+    <Authors>Noah Porch &lt;chz160@yahoo.com&gt;</Authors>
     <AssemblyName>LprServer</AssemblyName>
     <OutputType>Library</OutputType>
     <PackageId>LprServer</PackageId>
