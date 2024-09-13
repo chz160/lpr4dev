@@ -39,7 +39,7 @@ _View of the web-based dashboard showing active and historical print jobs._
 ![Screenshot 2](screenshot2.png)  
 _Configuration options for managing virtual printers and viewing logs._
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fchz160%2Flpr4dev.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fchz160%2Flpr4dev?ref=badge_shield)
+<!-- [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fchz160%2Flpr4dev.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fchz160%2Flpr4dev?ref=badge_shield) -->
 
 ### Simulated PJL Commands
 lpr4dev currently supports the following PJL commands:
@@ -50,9 +50,9 @@ lpr4dev currently supports the following PJL commands:
 
 ### Support and Contributions
 
-If you find lpr4dev useful, consider supporting further development:  
+If you find lpr4dev useful, consider supporting Rob Wood, the creator of original project, smtp4dev:  
 <a href="https://www.patreon.com/bePatron?u=38204828" data-patreon-widget-type="become-patron-button"><img alt='Become a Patreon' src='https://c5.patreon.com/external/logo/become_a_patron_button.png' height="30px"></a>  
-<a href='https://www.paypal.me/chz160'><img alt='Donate' src='https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png'/></a>
+<a href='https://www.paypal.me/rnwood'><img alt='Donate' src='https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png'/></a>
 
 Contributions, bug reports, and feature requests are welcome! Please open an issue or submit a pull request on GitHub.
 
